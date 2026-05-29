@@ -53,7 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         
         if (allData.length > 0) {
-            renderCityPills();
             filterAndRender();
         }
     });
