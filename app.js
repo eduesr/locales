@@ -9,6 +9,22 @@ document.addEventListener('DOMContentLoaded', () => {
     let activeCity = 'Todas'; // 'Todas' means no city filter
     let currentSearchTerm = '';
 
+    const getDiscarded = () => JSON.parse(localStorage.getItem('oso_descartados') || '[]');
+    window.toggleDiscard = (id) => {
+        let discarded = getDiscarded();
+        if (discarded.includes(id)) {
+            discarded = discarded.filter(i => i !== id);
+        } else {
+            discarded.push(id);
+        }
+        localStorage.setItem('oso_descartados', JSON.stringify(discarded));
+        
+        // Remove active class from buttons to trigger a fresh start for cities if needed, 
+        // though re-rendering handles it nicely.
+        renderCityPills();
+        filterAndRender();
+    };
+
     // Fetch data from JSON
     async function loadData() {
         try {
@@ -54,7 +70,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function renderCityPills() {
         // Get unique cities for the CURRENT region
-        const regionData = allData.filter(item => item.region === activeRegion);
+        let regionData = [];
+        const discarded = getDiscarded();
+        
+        if (activeRegion === 'Descartados') {
+            regionData = allData.filter(item => discarded.includes(item.id));
+        } else {
+            regionData = allData.filter(item => item.region === activeRegion && !discarded.includes(item.id));
+        }
+        
         const cities = new Set(regionData.map(item => item.location));
         const sortedCities = Array.from(cities).sort();
         
@@ -97,12 +121,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function filterAndRender() {
+        const discarded = getDiscarded();
         const filtered = allData.filter(item => {
             const matchesSearch = item.title.toLowerCase().includes(currentSearchTerm) ||
                                   item.description.toLowerCase().includes(currentSearchTerm) ||
                                   item.location.toLowerCase().includes(currentSearchTerm);
                                   
-            const matchesRegion = item.region === activeRegion;
+            let matchesRegion = false;
+            if (activeRegion === 'Descartados') {
+                matchesRegion = discarded.includes(item.id);
+            } else {
+                matchesRegion = item.region === activeRegion && !discarded.includes(item.id);
+            }
+            
             const matchesCity = activeCity === 'Todas' || item.location === activeCity;
             
             return matchesSearch && matchesRegion && matchesCity;
@@ -148,7 +179,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     <p class="card-description">${item.description}</p>
                     <div class="card-footer">
                         <span class="card-date">${date}</span>
-                        <a href="${item.url}" class="btn" target="_blank" rel="noopener noreferrer">Ver detalle</a>
+                        <div class="card-actions" style="display: flex; gap: 8px;">
+                            <button class="btn btn-discard" onclick="window.toggleDiscard('${item.id}')" style="background-color: ${getDiscarded().includes(item.id) ? '#10b981' : '#ef4444'};">${getDiscarded().includes(item.id) ? 'Restaurar 🐻' : 'Descartar 🐻'}</button>
+                            <a href="${item.url}" class="btn" target="_blank" rel="noopener noreferrer">Ver detalle</a>
+                        </div>
                     </div>
                 </div>
             `;
