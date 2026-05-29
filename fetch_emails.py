@@ -99,7 +99,7 @@ def extract_data_from_text(text, html_text, subject, msg_id):
         img_urls = re.findall(r'<img[^>]+src=[\'"](https?://[^\'"]+)[\'"]', html_text)
         for img in img_urls:
             img_lower = img.lower()
-            if not any(x in img_lower for x in ['logo', 'pixel', 'icon', 'tracker', 'blank', 'spacer', 'transparent']):
+            if not any(x in img_lower for x in ['logo', 'pixel', 'icon', 'tracker', 'blank', 'spacer', 'transparent', 'sgt.fotocasa', 'wf/open']):
                 image_url = img
                 break
                 
