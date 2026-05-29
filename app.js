@@ -236,9 +236,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const card = document.createElement('article');
             card.className = 'card';
+            const sourceBadge = item.source && item.source !== 'Otro' ? `<span class="card-badge badge-${item.source.toLowerCase()}">${item.source}</span>` : '';
+            
             const imageHtml = item.image_url 
-                ? `<div class="card-image" style="background-image: url('${item.image_url}')"></div>`
-                : `<div class="card-image-placeholder">${item.area_m2} m²</div>`;
+                ? `<div class="card-image" style="background-image: url('${item.image_url}')">${sourceBadge}</div>`
+                : `<div class="card-image-placeholder">${sourceBadge}</div>`;
 
             card.innerHTML = `
                 ${imageHtml}
