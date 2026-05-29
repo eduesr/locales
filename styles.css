@@ -377,45 +377,66 @@ main {
 }
 
 /* Responsive (Móvil) */
+/* Mobile Visibility Utilities */
 @media (max-width: 768px) {
-    .header h1 {
-        font-size: 1.8rem;
-    }
+    .desktop-only { display: none !important; }
+    .mobile-only { display: block !important; }
     
-    .header p {
-        font-size: 0.95rem;
-    }
-    
-    .grid {
-        grid-template-columns: 1fr;
-    }
+    .header h1 { font-size: 1.8rem; }
+    .header p { font-size: 0.95rem; }
+    .grid { grid-template-columns: 1fr; }
     
     .top-controls {
-        flex-direction: column;
-        align-items: stretch;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        gap: 10px;
+        margin-bottom: 25px;
     }
     
     .region-tabs {
-        width: 100%;
+        width: auto;
+        flex: 1;
         display: flex;
+        margin-bottom: 0;
     }
     
     .region-tab {
         flex: 1;
         text-align: center;
+        padding: 8px 5px;
+        font-size: 0.85rem;
+    }
+    
+    .actions-container {
+        gap: 5px;
+        justify-content: flex-end;
     }
     
     .search-container {
-        align-self: flex-end;
+        align-self: auto;
+    }
+    
+    #search-input:focus,
+    #search-input:not(:placeholder-shown) {
+        width: 150px; /* Un poco más pequeño en móvil para no desbordar */
     }
     
     .filters-summary {
         flex-direction: column;
         gap: 15px;
     }
+    
+    .card-actions {
+        flex-direction: column;
+    }
+    
+    .card-actions .btn {
+        width: 100%;
+        text-align: center;
+    }
 }
-
-/* Modal Styles */
 .modal {
     display: none;
     position: fixed;
@@ -510,24 +531,7 @@ main {
     margin-bottom: 0;
 }
 
-/* Mobile Visibility Utilities */
-@media (max-width: 768px) {
-    .desktop-only { display: none !important; }
-    .mobile-only { display: block !important; }
-    
-    .actions-container {
-        justify-content: flex-end;
-    }
-    
-    .card-actions {
-        flex-direction: column;
-    }
-    
-    .card-actions .btn {
-        width: 100%;
-        text-align: center;
-    }
-}
+
 
 @media (min-width: 769px) {
     .desktop-only { display: inline-block !important; }
