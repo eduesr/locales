@@ -3,7 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.getElementById('search-input');
     const resultsCount = document.getElementById('results-count');
     const cityFiltersContainer = document.getElementById('city-filters');
+    const regionTabs = document.querySelectorAll('.region-tab');
     let allData = [];
+    let activeRegion = 'Vigo'; // Default region
     let activeCity = 'Todas'; // 'Todas' means no city filter
     let currentSearchTerm = '';
 
@@ -15,8 +17,25 @@ document.addEventListener('DOMContentLoaded', () => {
             
             allData = await response.json();
             
-            // Generate city pills
-            renderCityPills(allData);
+            // Set up region tabs
+            regionTabs.forEach(tab => {
+                tab.addEventListener('click', (e) => {
+                    // Update active class
+                    regionTabs.forEach(t => t.classList.remove('active'));
+                    e.target.classList.add('active');
+                    
+                    // Update active region
+                    activeRegion = e.target.getAttribute('data-region');
+                    activeCity = 'Todas'; // Reset city filter when changing region
+                    
+                    // Re-render
+                    renderCityPills();
+                    filterAndRender();
+                });
+            });
+            
+            // Generate city pills for initial region
+            renderCityPills();
             
             // Initial render
             filterAndRender();
@@ -33,9 +52,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function renderCityPills(data) {
-        // Get unique cities
-        const cities = new Set(data.map(item => item.location));
+    function renderCityPills() {
+        // Get unique cities for the CURRENT region
+        const regionData = allData.filter(item => item.region === activeRegion);
+        const cities = new Set(regionData.map(item => item.location));
         const sortedCities = Array.from(cities).sort();
         
         cityFiltersContainer.innerHTML = '';
@@ -82,9 +102,10 @@ document.addEventListener('DOMContentLoaded', () => {
                                   item.description.toLowerCase().includes(currentSearchTerm) ||
                                   item.location.toLowerCase().includes(currentSearchTerm);
                                   
+            const matchesRegion = item.region === activeRegion;
             const matchesCity = activeCity === 'Todas' || item.location === activeCity;
             
-            return matchesSearch && matchesCity;
+            return matchesSearch && matchesRegion && matchesCity;
         });
         renderListings(filtered);
     }

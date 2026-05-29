@@ -75,13 +75,22 @@ def extract_data_from_text(text, html_text, subject, msg_id):
     clean_text = re.sub(r'\s+', ' ', text).strip()
     description = clean_text[:150] + "..." if len(clean_text) > 150 else clean_text
     
-    # Extraer ciudad: Lista de las principales ciudades/pueblos de la zona
-    cities = ["Vigo", "Santiago de Compostela", "Bueu", "Pontevedra", "Cangas", "Moaña", "Redondela", "Porriño", "Nigrán", "Baiona", "Marín"]
-    location = "Otras zonas" # Valor por defecto
-    for city in cities:
-        # Buscamos en el asunto o en el principio del texto
-        if city.lower() in subject.lower() or city.lower() in clean_text.lower():
-            location = city
+    # Extraer ciudad y región
+    regions_mapping = {
+        "Vigo": ["Vigo", "Bueu", "Pontevedra", "Cangas", "Moaña", "Redondela", "Porriño", "Nigrán", "Baiona", "Marín"],
+        "Santiago": ["Santiago de Compostela", "Ames", "Teo", "Milladoiro", "Sigueiro"]
+    }
+    
+    location = "Otras zonas"
+    region = "Vigo" # Por defecto
+    
+    for r_name, cities in regions_mapping.items():
+        for city in cities:
+            if city.lower() in subject.lower() or city.lower() in clean_text.lower():
+                location = city
+                region = r_name
+                break
+        if location != "Otras zonas":
             break
             
     return {
@@ -90,6 +99,7 @@ def extract_data_from_text(text, html_text, subject, msg_id):
         "price": price,
         "currency": "€",
         "area_m2": area,
+        "region": region,
         "location": location,
         "description": description,
         "url": url,
