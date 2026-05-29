@@ -3,25 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.getElementById('search-input');
     const resultsCount = document.getElementById('results-count');
     const cityFiltersContainer = document.getElementById('city-filters');
-    const regionTabs = document.querySelectorAll('.region-tab');
-    
-    // Elementos del menú móvil
-    const meatballBtn = document.getElementById('meatball-btn');
-    const mobileDropdown = document.getElementById('mobile-dropdown');
-    
-    if (meatballBtn && mobileDropdown) {
-        meatballBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            mobileDropdown.classList.toggle('show');
-        });
-        
-        document.addEventListener('click', () => {
-            mobileDropdown.classList.remove('show');
-        });
-    }
 
     let allData = [];
-    let activeRegion = 'Vigo'; // Default region
     let activeCity = 'Todas'; // 'Todas' means no city filter
     let currentSearchTerm = '';
 
@@ -101,55 +84,8 @@ document.addEventListener('DOMContentLoaded', () => {
             
             allData = await response.json();
             
-            // Generate dynamic region tabs
-            const dynamicTabsContainer = document.getElementById('region-selector');
-            if (dynamicTabsContainer) {
-                // Get unique regions
-                const uniqueRegions = new Set(allData.map(item => item.region));
-                const sortedRegions = Array.from(uniqueRegions).sort();
-                
-                // Set first region as active by default if none is set
-                if (!activeRegion || !sortedRegions.includes(activeRegion)) {
-                    activeRegion = sortedRegions.length > 0 ? sortedRegions[0] : null;
-                }
-
-                // Add dynamic region buttons
-                sortedRegions.forEach(region => {
-                    const btn = document.createElement('button');
-                    btn.className = `region-tab ${region === activeRegion ? 'active' : ''}`;
-                    btn.dataset.region = region;
-                    btn.innerHTML = `Área de <strong class="mobile-break">${region}</strong>`;
-                    dynamicTabsContainer.appendChild(btn);
-                });
-                
-                // Set up event listeners for newly created tabs + dropdown items
-                const allRegionTabs = document.querySelectorAll('.region-tab');
-                allRegionTabs.forEach(tab => {
-                    tab.addEventListener('click', (e) => {
-                        const selectedRegion = e.currentTarget.dataset.region || e.target.dataset.region;
-                        activeRegion = selectedRegion;
-                        
-                        // Actualizar clase 'active' en todas las pestañas
-                        allRegionTabs.forEach(t => {
-                            if (t.dataset.region === selectedRegion) {
-                                t.classList.add('active');
-                            } else {
-                                t.classList.remove('active');
-                            }
-                        });
-                        
-                        // Si hicimos click en el dropdown, lo cerramos
-                        if (mobileDropdown) {
-                            mobileDropdown.classList.remove('show');
-                        }
-                        
-                        activeCity = 'Todas'; // Reset city filter when changing region
-                        
-                        renderCityPills();
-                        filterAndRender();
-                    });
-                });
-            }
+            // Render city pills based on all available data
+            renderCityPills();
             
             // Generate city pills for initial region
             renderCityPills();
@@ -170,21 +106,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function renderCityPills() {
-        // Get unique cities for the CURRENT region
-        let regionData = [];
-        
-        if (activeRegion === 'Descartados') {
-            regionData = allData.filter(item => discardedUrls.includes(item.url));
-        } else {
-            regionData = allData.filter(item => item.region === activeRegion && !discardedUrls.includes(item.url));
-        }
-        
-        const cities = new Set(regionData.map(item => item.location));
+        // Obtenemos poblaciones únicas solo de los locales NO descartados
+        const nonDiscardedData = allData.filter(item => !discardedUrls.includes(item.url));
+        const cities = new Set(nonDiscardedData.map(item => item.location));
         const sortedCities = Array.from(cities).sort();
         
         cityFiltersContainer.innerHTML = '';
         
-        // Add "Todas" pill
+        // Pastilla "Todas"
         const allPill = document.createElement('button');
         allPill.className = 'pill active';
         allPill.textContent = 'Todas';
@@ -195,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         cityFiltersContainer.appendChild(allPill);
         
-        // Add specific city pills
+        // Pastillas de cada población
         sortedCities.forEach(city => {
             const pill = document.createElement('button');
             pill.className = 'pill';
@@ -207,12 +136,23 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             cityFiltersContainer.appendChild(pill);
         });
+
+        // Pastilla de "Descartados"
+        const discardedPill = document.createElement('button');
+        discardedPill.className = 'pill';
+        discardedPill.textContent = '🗑️ Descartados';
+        discardedPill.addEventListener('click', () => {
+            activeCity = 'Descartados';
+            updateActivePill();
+            filterAndRender();
+        });
+        cityFiltersContainer.appendChild(discardedPill);
     }
 
     function updateActivePill() {
         const pills = cityFiltersContainer.querySelectorAll('.pill');
         pills.forEach(pill => {
-            if (pill.textContent === activeCity) {
+            if (pill.textContent === activeCity || (activeCity === 'Descartados' && pill.textContent.includes('Descartados'))) {
                 pill.classList.add('active');
             } else {
                 pill.classList.remove('active');
@@ -226,16 +166,14 @@ document.addEventListener('DOMContentLoaded', () => {
                                   item.description.toLowerCase().includes(currentSearchTerm) ||
                                   item.location.toLowerCase().includes(currentSearchTerm);
                                   
-            let matchesRegion = false;
-            if (activeRegion === 'Descartados') {
-                matchesRegion = discardedUrls.includes(item.url);
+            const isDiscarded = discardedUrls.includes(item.url);
+            
+            if (activeCity === 'Descartados') {
+                return matchesSearch && isDiscarded;
             } else {
-                matchesRegion = item.region === activeRegion && !discardedUrls.includes(item.url);
+                const matchesCity = activeCity === 'Todas' || item.location === activeCity;
+                return matchesSearch && !isDiscarded && matchesCity;
             }
-            
-            const matchesCity = activeCity === 'Todas' || item.location === activeCity;
-            
-            return matchesSearch && matchesRegion && matchesCity;
         });
         renderListings(filtered);
     }
