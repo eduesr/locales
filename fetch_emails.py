@@ -70,9 +70,12 @@ def extract_data_from_text(text, html_text, subject, msg_id):
                 
     url = url_match.group(1) if url_match else f"https://mail.google.com/mail/u/0/#inbox/{msg_id}"
     
-    # Extraer descripción (tomamos los primeros 150 caracteres para no alargarlo)
-    # Limpiamos saltos de línea extraños
+    # Limpiamos saltos de línea extraños, URLs y basura de Fotocasa
     clean_text = re.sub(r'\s+', ' ', text).strip()
+    clean_text = re.sub(r'https?://[^\s)]+', '', clean_text) # Quita URLs
+    clean_text = clean_text.replace('%open-track%', '').replace('Fotocasa ( )', '').replace('( )', '').replace('()', '')
+    clean_text = re.sub(r'\s+', ' ', clean_text).strip() # Limpia espacios dobles dejados por los reemplazos
+    
     description = clean_text[:150] + "..." if len(clean_text) > 150 else clean_text
     
     # Extraer ciudad y región
