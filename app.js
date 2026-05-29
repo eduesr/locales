@@ -64,12 +64,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    window.toggleDiscard = (url) => {
-        const key = encodeKey(url);
+    window.toggleDiscard = (id) => {
+        const item = allData.find(i => i.id === id);
+        if (!item) return;
+        const url = item.url;
+        
         if (discardedUrls.includes(url)) {
+            const key = encodeKey(url);
             db.ref('discards/' + key).remove();
         } else {
-            urlToDiscard = url;
+            urlToDiscard = url; // guardamos la url original intacta
             confirmModal.classList.add('active');
         }
     };
@@ -227,7 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="card-footer">
                         <span class="card-date">${date}</span>
                         <div class="card-actions" style="display: flex; gap: 8px;">
-                            <button class="btn btn-discard" onclick="window.toggleDiscard('${item.url}')" style="background-color: ${discardedUrls.includes(item.url) ? '#10b981' : '#ef4444'};">${discardedUrls.includes(item.url) ? 'Recuperar 🐻' : 'Descartar 🐻'}</button>
+                            <button class="btn btn-discard" onclick="window.toggleDiscard('${item.id}')" style="background-color: ${discardedUrls.includes(item.url) ? '#10b981' : '#ef4444'};">${discardedUrls.includes(item.url) ? 'Recuperar 🐻' : 'Descartar 🐻'}</button>
                             <a href="${item.url}" class="btn" target="_blank" rel="noopener noreferrer">Ver detalle</a>
                         </div>
                     </div>
