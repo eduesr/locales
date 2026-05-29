@@ -96,14 +96,30 @@ def extract_data_from_text(text, html_text, subject, msg_id):
     elif m_idealista2:
         location = m_idealista2.group(1).strip()
     else:
-        # Fallback a búsqueda simple
-        fallback_cities = ["Vigo", "Bueu", "Pontevedra", "Santiago de Compostela", "A Coruña", "Ourense", "Lugo", "Marín", "Porriño", "Redondela", "Cangas"]
+        # Fallback a búsqueda simple si falla el regex
+        fallback_cities = ["Vigo", "Bueu", "Morrazo", "Pontevedra", "Santiago de Compostela", "A Coruña", "Ourense", "Lugo", "Marín", "Porriño", "Redondela", "Cangas"]
         for city in fallback_cities:
             if city.lower() in subject.lower() or city.lower() in clean_text.lower():
                 location = city
                 break
 
-    region = location # En el nuevo paradigma, la región es la propia población
+    # Mapear location a su Área principal
+    regions_mapping = {
+        "Vigo": ["vigo", "bueu", "morrazo", "pontevedra", "cangas", "moaña", "redondela", "porriño", "nigrán", "baiona", "marín"],
+        "Santiago": ["santiago", "ames", "teo", "milladoiro", "sigueiro"]
+    }
+    
+    region = "Otras zonas"
+    loc_lower = location.lower()
+    
+    for r_name, cities in regions_mapping.items():
+        if any(c in loc_lower for c in cities):
+            region = r_name
+            break
+            
+    # Fallback por defecto si no mapea
+    if region == "Otras zonas" and location != "Otras zonas":
+        region = "Vigo" # Por defecto a Vigo para no perder locales
             
     # Extraer imagen (buscamos la primera imagen que no parezca un logo o pixel de tracking)
     image_url = None

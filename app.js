@@ -21,7 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     let allData = [];
-    let activeRegion = null; // Default will be set dynamically
+    let activeRegion = 'Vigo'; // Default region
+    let activeCity = 'Todas'; // 'Todas' means no city filter
     let currentSearchTerm = '';
 
     // Initialize Firebase
@@ -100,52 +101,35 @@ document.addEventListener('DOMContentLoaded', () => {
             
             allData = await response.json();
             
-            // Generate dynamic region tabs
-            const dynamicTabsContainer = document.getElementById('region-selector');
-            if (dynamicTabsContainer) {
-                // Get unique regions
-                const uniqueRegions = new Set(allData.map(item => item.region));
-                const sortedRegions = Array.from(uniqueRegions).sort();
-                
-                // Set first region as active by default if none is set
-                if (!activeRegion && sortedRegions.length > 0) {
-                    activeRegion = sortedRegions[0];
-                }
-
-                // Add dynamic region buttons
-                sortedRegions.forEach(region => {
-                    const btn = document.createElement('button');
-                    btn.className = `region-tab ${region === activeRegion ? 'active' : ''}`;
-                    btn.dataset.region = region;
-                    btn.innerHTML = `Área de <strong class="mobile-break">${region}</strong>`;
-                    dynamicTabsContainer.appendChild(btn);
-                });
-
-                // Add "Descartados" button at the end (desktop only)
-                const descartadosBtn = document.createElement('button');
-                descartadosBtn.className = `region-tab desktop-only ${activeRegion === 'Descartados' ? 'active' : ''}`;
-                descartadosBtn.dataset.region = 'Descartados';
-                descartadosBtn.textContent = 'Oso descartados 🐻';
-                dynamicTabsContainer.appendChild(descartadosBtn);
-                
-                // Add event listeners to newly created tabs
-                document.querySelectorAll('.region-tab').forEach(tab => {
-                    tab.addEventListener('click', (e) => {
-                        const selectedRegion = e.currentTarget.dataset.region;
-                        activeRegion = selectedRegion;
-                        
-                        document.querySelectorAll('.region-tab').forEach(t => {
-                            t.classList.toggle('active', t.dataset.region === selectedRegion);
-                        });
-                        
-                        if (mobileDropdown) {
-                            mobileDropdown.classList.remove('show');
+            // Sincronizar todas las pestañas de región (desktop y dropdown)
+            regionTabs.forEach(tab => {
+                tab.addEventListener('click', (e) => {
+                    const selectedRegion = e.currentTarget.dataset.region || e.target.dataset.region;
+                    activeRegion = selectedRegion;
+                    
+                    // Actualizar clase 'active' en todas las pestañas
+                    regionTabs.forEach(t => {
+                        if (t.dataset.region === selectedRegion) {
+                            t.classList.add('active');
+                        } else {
+                            t.classList.remove('active');
                         }
-                        
-                        filterAndRender();
                     });
+                    
+                    // Si hicimos click en el dropdown, lo cerramos
+                    if (mobileDropdown) {
+                        mobileDropdown.classList.remove('show');
+                    }
+                    
+                    activeCity = 'Todas'; // Reset city filter when changing region
+                    
+                    renderCityPills();
+                    filterAndRender();
                 });
-            }
+            });
+            
+            // Generate city pills for initial region
+            renderCityPills();
             
             // Initial render
             filterAndRender();
@@ -162,6 +146,57 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    function renderCityPills() {
+        // Get unique cities for the CURRENT region
+        let regionData = [];
+        
+        if (activeRegion === 'Descartados') {
+            regionData = allData.filter(item => discardedUrls.includes(item.url));
+        } else {
+            regionData = allData.filter(item => item.region === activeRegion && !discardedUrls.includes(item.url));
+        }
+        
+        const cities = new Set(regionData.map(item => item.location));
+        const sortedCities = Array.from(cities).sort();
+        
+        cityFiltersContainer.innerHTML = '';
+        
+        // Add "Todas" pill
+        const allPill = document.createElement('button');
+        allPill.className = 'pill active';
+        allPill.textContent = 'Todas';
+        allPill.addEventListener('click', () => {
+            activeCity = 'Todas';
+            updateActivePill();
+            filterAndRender();
+        });
+        cityFiltersContainer.appendChild(allPill);
+        
+        // Add specific city pills
+        sortedCities.forEach(city => {
+            const pill = document.createElement('button');
+            pill.className = 'pill';
+            pill.textContent = city;
+            pill.addEventListener('click', () => {
+                activeCity = city;
+                updateActivePill();
+                filterAndRender();
+            });
+            cityFiltersContainer.appendChild(pill);
+        });
+    }
+
+    function updateActivePill() {
+        const pills = cityFiltersContainer.querySelectorAll('.pill');
+        pills.forEach(pill => {
+            if (pill.textContent === activeCity) {
+                pill.classList.add('active');
+            } else {
+                pill.classList.remove('active');
+            }
+        });
+    }
+
     function filterAndRender() {
         const filtered = allData.filter(item => {
             const matchesSearch = item.title.toLowerCase().includes(currentSearchTerm) ||
@@ -175,7 +210,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 matchesRegion = item.region === activeRegion && !discardedUrls.includes(item.url);
             }
             
-            return matchesSearch && matchesRegion;
+            const matchesCity = activeCity === 'Todas' || item.location === activeCity;
+            
+            return matchesSearch && matchesRegion && matchesCity;
         });
         renderListings(filtered);
     }
