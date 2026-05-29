@@ -28,16 +28,39 @@ document.addEventListener('DOMContentLoaded', () => {
     const discardsRef = db.ref('discards');
     
     // Safely encode URL for Firebase key (no ., $, #, [, ], /)
-    const encodeKey = (url) => btoa(encodeURIComponent(url)).replace(/\//g, '_').replace(/\+/g, '-').replace(/=/g, '');
-    const decodeKey = (key) => decodeURIComponent(atob(key.replace(/_/g, '/').replace(/-/g, '+')));
+    const encodeKey = (url) => encodeURIComponent(url).replace(/\./g, '%2E');
+    const decodeKey = (key) => decodeURIComponent(key.replace(/%2E/g, '.'));
 
     discardsRef.on('value', (snapshot) => {
         const data = snapshot.val() || {};
-        discardedUrls = Object.keys(data).filter(k => data[k]).map(k => decodeKey(k));
+        discardedUrls = Object.keys(data).filter(k => data[k]).map(k => {
+            try { return decodeKey(k); } catch(e) { return k; }
+        });
         
         if (allData.length > 0) {
             renderCityPills();
             filterAndRender();
+        }
+    });
+
+    // Modal elements
+    const confirmModal = document.getElementById('confirm-modal');
+    const modalCancel = document.getElementById('modal-cancel');
+    const modalConfirm = document.getElementById('modal-confirm');
+    let urlToDiscard = null;
+
+    modalCancel.addEventListener('click', () => {
+        confirmModal.classList.remove('active');
+        urlToDiscard = null;
+    });
+
+    modalConfirm.addEventListener('click', () => {
+        if (urlToDiscard) {
+            const key = encodeKey(urlToDiscard);
+            db.ref('discards/' + key).set(true)
+              .catch(err => alert("Error de conexión con la base de datos. Comprueba las Reglas de Firebase."));
+            confirmModal.classList.remove('active');
+            urlToDiscard = null;
         }
     });
 
@@ -46,10 +69,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (discardedUrls.includes(url)) {
             db.ref('discards/' + key).remove();
         } else {
-            if (confirm("¿Seguro que quieres descartar este local?\nLo pasamos a descartados.")) {
-                db.ref('discards/' + key).set(true)
-                  .catch(err => alert("Error de conexión con la base de datos. Comprueba que las Reglas de Firebase estén en modo prueba (true)."));
-            }
+            urlToDiscard = url;
+            confirmModal.classList.add('active');
         }
     };
 
