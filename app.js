@@ -87,9 +87,6 @@ document.addEventListener('DOMContentLoaded', () => {
             // Render city pills based on all available data
             renderCityPills();
             
-            // Generate city pills for initial region
-            renderCityPills();
-            
             // Initial render
             filterAndRender();
             
@@ -98,6 +95,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 currentSearchTerm = e.target.value.toLowerCase();
                 filterAndRender();
             });
+            
+            // Add scroll event listener for carousel fade effect
+            const filtersSummary = document.querySelector('.filters-summary');
+            const checkScrollEnd = () => {
+                if (cityFiltersContainer.scrollWidth - cityFiltersContainer.clientWidth <= cityFiltersContainer.scrollLeft + 10) {
+                    filtersSummary.classList.add('at-end');
+                } else {
+                    filtersSummary.classList.remove('at-end');
+                }
+            };
+            cityFiltersContainer.addEventListener('scroll', checkScrollEnd);
+            setTimeout(checkScrollEnd, 100);
 
         } catch (error) {
             console.error('Error fetching data:', error);

@@ -164,10 +164,28 @@ main.container {
 
 /* Filters Summary */
 .filters-summary {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 20px;
+}
+
+.filters-summary::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 100%;
+    background: linear-gradient(to left, var(--bg-color) 5%, transparent);
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.filters-summary.at-end::after {
+    opacity: 0;
 }
 
 .results-count {
