@@ -9,20 +9,44 @@ document.addEventListener('DOMContentLoaded', () => {
     let activeCity = 'Todas'; // 'Todas' means no city filter
     let currentSearchTerm = '';
 
-    const getDiscarded = () => JSON.parse(localStorage.getItem('oso_descartados') || '[]');
-    window.toggleDiscard = (id) => {
-        let discarded = getDiscarded();
-        if (discarded.includes(id)) {
-            discarded = discarded.filter(i => i !== id);
-        } else {
-            discarded.push(id);
-        }
-        localStorage.setItem('oso_descartados', JSON.stringify(discarded));
+    // Initialize Firebase
+    const firebaseConfig = {
+      apiKey: "AIzaSyAIkbnUCLqSY1lS_lcuCbtMMPgPXA0Ppy8",
+      authDomain: "locales-c8807.firebaseapp.com",
+      projectId: "locales-c8807",
+      storageBucket: "locales-c8807.firebasestorage.app",
+      messagingSenderId: "593455969500",
+      appId: "1:593455969500:web:7d3c03399141b035343019",
+      measurementId: "G-EB8CSV6H5V"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
+    
+    // Discard logic with Firebase
+    let discardedUrls = [];
+    const discardsRef = db.ref('discards');
+    
+    // Safely encode URL for Firebase key (no ., $, #, [, ], /)
+    const encodeKey = (url) => btoa(encodeURIComponent(url)).replace(/\//g, '_').replace(/\+/g, '-').replace(/=/g, '');
+    const decodeKey = (key) => decodeURIComponent(atob(key.replace(/_/g, '/').replace(/-/g, '+')));
+
+    discardsRef.on('value', (snapshot) => {
+        const data = snapshot.val() || {};
+        discardedUrls = Object.keys(data).filter(k => data[k]).map(k => decodeKey(k));
         
-        // Remove active class from buttons to trigger a fresh start for cities if needed, 
-        // though re-rendering handles it nicely.
-        renderCityPills();
-        filterAndRender();
+        if (allData.length > 0) {
+            renderCityPills();
+            filterAndRender();
+        }
+    });
+
+    window.toggleDiscard = (url) => {
+        const key = encodeKey(url);
+        if (discardedUrls.includes(url)) {
+            db.ref('discards/' + key).remove();
+        } else {
+            db.ref('discards/' + key).set(true);
+        }
     };
 
     // Fetch data from JSON
@@ -71,12 +95,11 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderCityPills() {
         // Get unique cities for the CURRENT region
         let regionData = [];
-        const discarded = getDiscarded();
         
         if (activeRegion === 'Descartados') {
-            regionData = allData.filter(item => discarded.includes(item.id));
+            regionData = allData.filter(item => discardedUrls.includes(item.url));
         } else {
-            regionData = allData.filter(item => item.region === activeRegion && !discarded.includes(item.id));
+            regionData = allData.filter(item => item.region === activeRegion && !discardedUrls.includes(item.url));
         }
         
         const cities = new Set(regionData.map(item => item.location));
@@ -121,7 +144,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function filterAndRender() {
-        const discarded = getDiscarded();
         const filtered = allData.filter(item => {
             const matchesSearch = item.title.toLowerCase().includes(currentSearchTerm) ||
                                   item.description.toLowerCase().includes(currentSearchTerm) ||
@@ -129,9 +151,9 @@ document.addEventListener('DOMContentLoaded', () => {
                                   
             let matchesRegion = false;
             if (activeRegion === 'Descartados') {
-                matchesRegion = discarded.includes(item.id);
+                matchesRegion = discardedUrls.includes(item.url);
             } else {
-                matchesRegion = item.region === activeRegion && !discarded.includes(item.id);
+                matchesRegion = item.region === activeRegion && !discardedUrls.includes(item.url);
             }
             
             const matchesCity = activeCity === 'Todas' || item.location === activeCity;
@@ -180,7 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="card-footer">
                         <span class="card-date">${date}</span>
                         <div class="card-actions" style="display: flex; gap: 8px;">
-                            <button class="btn btn-discard" onclick="window.toggleDiscard('${item.id}')" style="background-color: ${getDiscarded().includes(item.id) ? '#10b981' : '#ef4444'};">${getDiscarded().includes(item.id) ? 'Restaurar 🐻' : 'Descartar 🐻'}</button>
+                            <button class="btn btn-discard" onclick="window.toggleDiscard('${item.url}')" style="background-color: ${discardedUrls.includes(item.url) ? '#10b981' : '#ef4444'};">${discardedUrls.includes(item.url) ? 'Restaurar 🐻' : 'Descartar 🐻'}</button>
                             <a href="${item.url}" class="btn" target="_blank" rel="noopener noreferrer">Ver detalle</a>
                         </div>
                     </div>
