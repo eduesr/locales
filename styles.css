@@ -381,6 +381,7 @@ main {
 @media (max-width: 768px) {
     .desktop-only { display: none !important; }
     .mobile-only { display: block !important; }
+    .mobile-break { display: block; }
     
     .header h1 { font-size: 1.8rem; }
     .header p { font-size: 0.95rem; }
