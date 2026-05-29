@@ -11,7 +11,12 @@ El sistema está compuesto por dos partes principales: un **Scraper en Python** 
 - **Funcionamiento:** Se conecta a la API de Gmail y busca correos con la etiqueta `locales`. Extrae el título, precio, metros cuadrados, descripción y el enlace al anuncio (Idealista, Fotocasa, etc.).
 - **Automatización:** Se ejecuta automáticamente cada 6 horas mediante GitHub Actions (`.github/workflows/update_data.yml`). Si encuentra correos nuevos, actualiza el archivo `data.json` y hace un commit automático en el repositorio.
 - **Filtros:** Solo guarda locales que tengan un precio y área válidos (mayor a 0) y descarta correos de bienvenida de los portales.
-- **Extracción de Imágenes:** El script analiza el código HTML interno de los correos para localizar la foto del local. Incluye un sistema de listas negras para **ignorar logotipos, iconos de apps y píxeles de seguimiento** (como los de SendGrid en Fotocasa). Si tienes correos antiguos sin fotos, puedes forzar la descarga de imágenes ejecutando en tu terminal: `python3 fetch_emails.py`.
+- **Regex Parsing:** Se utilizan Expresiones Regulares (Regex) para analizar los Asuntos y Cuerpos de los correos.
+- **Detección Dinámica de Población:** El script extrae automáticamente la ciudad del anuncio basándose en patrones en el título del correo (ej. `anuncio en (.*?) de Local` para Fotocasa). Si detecta una nueva población, se convierte automáticamente en una nueva pestaña (Área) en el frontend, sin necesidad de reprogramar.
+- **Limpieza de Descripciones:** Se eliminan URLs de seguimiento (`%open-track%`), saludos automáticos y textos repetitivos para dejar la información concisa.
+- **Detección de Origen:** El script etiqueta los locales procedentes de Idealista o Fotocasa de forma automática.
+- **Exportación JSON:** Genera `data.json` que actúa como "base de datos" estática. Si tienes correos antiguos sin fotos, puedes forzar la descarga de imágenes ejecutando en tu terminal: `python3 fetch_emails.py`.
+
 ### 2. Frontend y Lógica de Descartes (El Equipo)
 - **Tecnologías:** HTML, CSS (Vanilla) y JavaScript (`app.js`).
 - **Visualización:** La web carga los datos de `data.json` y permite filtrar por región y ciudades específicas, así como un buscador por texto libre.

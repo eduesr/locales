@@ -82,23 +82,28 @@ def extract_data_from_text(text, html_text, subject, msg_id):
     
     description = clean_text[:150] + "..." if len(clean_text) > 150 else clean_text
     
-    # Extraer ciudad y región
-    regions_mapping = {
-        "Vigo": ["Vigo", "Bueu", "Pontevedra", "Cangas", "Moaña", "Redondela", "Porriño", "Nigrán", "Baiona", "Marín"],
-        "Santiago": ["Santiago de Compostela", "Ames", "Teo", "Milladoiro", "Sigueiro"]
-    }
-    
+    # Extraer ciudad dinámicamente del Asunto
     location = "Otras zonas"
-    region = "Vigo" # Por defecto
     
-    for r_name, cities in regions_mapping.items():
-        for city in cities:
+    m_foto = re.search(r'anuncio en (.*?) de Local', subject, re.IGNORECASE)
+    m_idealista1 = re.search(r'en venta en (.*?)$', subject, re.IGNORECASE)
+    m_idealista2 = re.search(r'en tu búsqueda: .*? en (.*?)!$', subject, re.IGNORECASE)
+    
+    if m_foto:
+        location = m_foto.group(1).strip()
+    elif m_idealista1:
+        location = m_idealista1.group(1).strip()
+    elif m_idealista2:
+        location = m_idealista2.group(1).strip()
+    else:
+        # Fallback a búsqueda simple
+        fallback_cities = ["Vigo", "Bueu", "Pontevedra", "Santiago de Compostela", "A Coruña", "Ourense", "Lugo", "Marín", "Porriño", "Redondela", "Cangas"]
+        for city in fallback_cities:
             if city.lower() in subject.lower() or city.lower() in clean_text.lower():
                 location = city
-                region = r_name
                 break
-        if location != "Otras zonas":
-            break
+
+    region = location # En el nuevo paradigma, la región es la propia población
             
     # Extraer imagen (buscamos la primera imagen que no parezca un logo o pixel de tracking)
     image_url = None
