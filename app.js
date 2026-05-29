@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const firebaseConfig = {
       apiKey: "AIzaSyAIkbnUCLqSY1lS_lcuCbtMMPgPXA0Ppy8",
       authDomain: "locales-c8807.firebaseapp.com",
+      databaseURL: "https://locales-c8807-default-rtdb.europe-west1.firebasedatabase.app",
       projectId: "locales-c8807",
       storageBucket: "locales-c8807.firebasestorage.app",
       messagingSenderId: "593455969500",
@@ -202,7 +203,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="card-footer">
                         <span class="card-date">${date}</span>
                         <div class="card-actions" style="display: flex; gap: 8px;">
-                            <button class="btn btn-discard" onclick="window.toggleDiscard('${item.url}')" style="background-color: ${discardedUrls.includes(item.url) ? '#10b981' : '#ef4444'};">${discardedUrls.includes(item.url) ? 'Restaurar 🐻' : 'Descartar 🐻'}</button>
+                            <button class="btn btn-discard" onclick="window.toggleDiscard('${item.url}')" style="background-color: ${discardedUrls.includes(item.url) ? '#10b981' : '#ef4444'};">${discardedUrls.includes(item.url) ? 'Recuperar 🐻' : 'Descartar 🐻'}</button>
                             <a href="${item.url}" class="btn" target="_blank" rel="noopener noreferrer">Ver detalle</a>
                         </div>
                     </div>
