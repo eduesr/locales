@@ -52,22 +52,42 @@ body {
 
 .team-avatars {
     display: flex;
-    justify-content: center;
-    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
     margin-top: 20px;
+}
+
+.avatar-team {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
     flex-wrap: wrap;
 }
 
 .avatar {
+    display: inline-block;
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid var(--border-color);
-    padding: 8px 18px;
     border-radius: 30px;
-    font-size: 1.05rem;
     color: var(--text-secondary);
     font-weight: 500;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.avatar.boss {
+    padding: 10px 24px;
+    font-size: 1.25rem;
+    color: var(--text-primary);
+    border-color: rgba(59, 130, 246, 0.5);
+    background: rgba(59, 130, 246, 0.1);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+}
+
+.avatar.small {
+    padding: 6px 14px;
+    font-size: 0.9rem;
 }
 
 .avatar:hover {
