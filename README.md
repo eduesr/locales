@@ -12,12 +12,12 @@ El sistema está compuesto por dos partes principales: un **Scraper en Python** 
 - **Automatización:** Se ejecuta automáticamente cada 6 horas mediante GitHub Actions (`.github/workflows/update_data.yml`). Si encuentra correos nuevos, actualiza el archivo `data.json` y hace un commit automático en el repositorio.
 - **Filtros:** Solo guarda locales que tengan un precio y área válidos (mayor a 0) y descarta correos de bienvenida de los portales.
 
-### 2. Frontend y Lógica de Descartes (El Oso 🐻)
+### 2. Frontend y Lógica de Descartes (El Equipo)
 - **Tecnologías:** HTML, CSS (Vanilla) y JavaScript (`app.js`).
 - **Visualización:** La web carga los datos de `data.json` y permite filtrar por región y ciudades específicas, así como un buscador por texto libre.
 
 #### Lógica de Sincronización y Descartes
-Para que el equipo (especialmente Jaime, "El Oso") pueda limpiar el listado y que todos vean la misma información en tiempo real, se ha integrado **Firebase Realtime Database**.
+Para que el equipo completo (**El Oso (el jefe) 🐻, El Drome, El Garro y El Fino**) pueda limpiar el listado y que todos vean la misma información en tiempo real, se ha integrado **Firebase Realtime Database**.
 
 **El flujo de estados es el siguiente:**
 1. **Estado Inicial (Activo):** Cuando un nuevo local llega por correo, aparece en la pestaña de su región correspondiente (ej. Área de Vigo).
