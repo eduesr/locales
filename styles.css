@@ -122,7 +122,9 @@ main.container {
 
 .search-icon {
     position: absolute;
-    right: 15px;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
     color: var(--text-secondary);
     pointer-events: none; /* Let clicks pass to input if underneath */
 }
