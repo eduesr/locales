@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
             allData = await response.json();
             
             // Generate dynamic region tabs
-            const dynamicTabsContainer = document.getElementById('dynamic-region-tabs');
+            const dynamicTabsContainer = document.getElementById('region-selector');
             if (dynamicTabsContainer) {
                 // Get unique regions
                 const uniqueRegions = new Set(allData.map(item => item.region));
