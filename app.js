@@ -236,16 +236,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const card = document.createElement('article');
             card.className = 'card';
+            const imageHtml = item.image_url 
+                ? `<div class="card-image" style="background-image: url('${item.image_url}')"></div>`
+                : `<div class="card-image-placeholder">${item.area_m2} m²</div>`;
+
             card.innerHTML = `
-                <div class="card-image-placeholder">
-                    ${item.area_m2} m²
-                </div>
+                ${imageHtml}
                 <div class="card-content">
                     <div class="card-header">
                         <span class="card-price">${item.price.toLocaleString('es-ES')} ${item.currency}</span>
                         <span class="card-area">${item.area_m2} m²</span>
                     </div>
                     <h2 class="card-title">${item.title}</h2>
+                    <span class="card-date">${date}</span>
                     <div class="card-location">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
@@ -255,7 +258,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                     <p class="card-description">${item.description}</p>
                     <div class="card-footer">
-                        <span class="card-date">${date}</span>
                         <div class="card-actions">
                             <button class="btn btn-discard" onclick="window.toggleDiscard('${item.id}')" style="background-color: ${discardedUrls.includes(item.url) ? '#10b981' : '#ef4444'};">${discardedUrls.includes(item.url) ? 'Recuperar 🐻' : 'Descartar 🐻'}</button>
                             <a href="${item.url}" class="btn" target="_blank" rel="noopener noreferrer">Ver detalle</a>

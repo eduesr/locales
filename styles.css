@@ -265,6 +265,15 @@ main.container {
     border-color: var(--accent);
 }
 
+.card-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    border-bottom: 1px solid var(--border-color);
+}
+
 .card-image-placeholder {
     height: 200px;
     background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
@@ -350,16 +359,29 @@ main.container {
 
 .card-footer {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
     margin-top: auto;
     padding-top: 15px;
     border-top: 1px solid var(--border-color);
 }
 
 .card-date {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     color: var(--text-secondary);
+    display: block;
+    margin-top: -5px;
+    margin-bottom: 15px;
+}
+
+.card-actions {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.card-actions .btn {
+    flex: 1;
+    text-align: center;
 }
 
 .btn {

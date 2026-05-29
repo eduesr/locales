@@ -93,6 +93,16 @@ def extract_data_from_text(text, html_text, subject, msg_id):
         if location != "Otras zonas":
             break
             
+    # Extraer imagen (buscamos la primera imagen que no parezca un logo o pixel de tracking)
+    image_url = None
+    if html_text:
+        img_urls = re.findall(r'<img[^>]+src=[\'"](https?://[^\'"]+)[\'"]', html_text)
+        for img in img_urls:
+            img_lower = img.lower()
+            if not any(x in img_lower for x in ['logo', 'pixel', 'icon', 'tracker', 'blank', 'spacer', 'transparent']):
+                image_url = img
+                break
+                
     return {
         "id": msg_id,
         "title": subject,
@@ -103,6 +113,7 @@ def extract_data_from_text(text, html_text, subject, msg_id):
         "location": location,
         "description": description,
         "url": url,
+        "image_url": image_url,
         "date": datetime.now().isoformat() + "Z"
     }
 
