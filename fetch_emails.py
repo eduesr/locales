@@ -70,10 +70,14 @@ def extract_data_from_text(text, html_text, subject, msg_id):
                 
     url = url_match.group(1) if url_match else f"https://mail.google.com/mail/u/0/#inbox/{msg_id}"
     
-    # Limpiamos saltos de línea extraños, URLs y basura de Fotocasa
+    # Limpiamos saltos de línea extraños, URLs y basura de Fotocasa/Idealista
     clean_text = re.sub(r'\s+', ' ', text).strip()
     clean_text = re.sub(r'https?://[^\s)]+', '', clean_text) # Quita URLs
-    clean_text = clean_text.replace('%open-track%', '').replace('Fotocasa ( )', '').replace('( )', '').replace('()', '')
+    clean_text = clean_text.replace('%open-track%', '').replace('*', '')
+    clean_text = re.sub(r'\(\s*\)', '', clean_text) # Quita paréntesis vacíos
+    clean_text = re.sub(r'(?i)fotocasa|idealista|hola \w+', '', clean_text)
+    clean_text = re.sub(r'(?i)hemos encontrado anuncios para ti|anuncio recién publicado con tus criterios', '', clean_text)
+    clean_text = re.sub(r'(?i)te recomendamos añadir filtros a tu alerta.*', '', clean_text) # Quita el texto de recomendación
     clean_text = re.sub(r'\s+', ' ', clean_text).strip() # Limpia espacios dobles dejados por los reemplazos
     
     description = clean_text[:150] + "..." if len(clean_text) > 150 else clean_text
