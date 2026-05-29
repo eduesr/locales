@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let allData = [];
     let activeCity = 'Todas'; // 'Todas' means no city filter
     let currentSearchTerm = '';
-    let currentSort = 'recent';
+    let currentSort = 'price-asc';
 
     // Initialize Firebase
     const firebaseConfig = {
