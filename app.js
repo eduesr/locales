@@ -269,7 +269,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="card-content">
                     <div class="card-header">
                         <span class="card-price">${item.price.toLocaleString('es-ES')} ${item.currency}</span>
-                        <span class="card-area">${item.area_m2} m²</span>
+                        <span class="card-area">${item.area_m2 > 0 ? item.area_m2 + ' m²' : 'No indicada'}</span>
                     </div>
                     <h2 class="card-title">${item.title}</h2>
                     <span class="card-date">${date}</span>

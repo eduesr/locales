@@ -87,7 +87,7 @@ def extract_data_from_text(text, html_text, subject, msg_id):
     
     m_foto = re.search(r'anuncio en (.*?) de Local', subject, re.IGNORECASE)
     m_idealista1 = re.search(r'en venta en (.*?)$', subject, re.IGNORECASE)
-    m_idealista2 = re.search(r'en tu búsqueda: .*? en (.*?)!$', subject, re.IGNORECASE)
+    m_idealista2 = re.search(r'en tu búsqueda: (?:.*? en )?(.*?)!$', subject, re.IGNORECASE)
     
     if m_foto:
         location = m_foto.group(1).strip()
@@ -213,7 +213,7 @@ def main():
         
         # Filtramos correos que no parezcan ofertas reales (ej. sin precio, sin área, o correos de bienvenida)
         is_welcome_email = any(word in subject.lower() for word in ['welcome', 'bienvenido', 'suscripción'])
-        if data['price'] > 0 and data['area_m2'] > 0 and not is_welcome_email:
+        if data['price'] > 0 and not is_welcome_email:
             locales_data.append(data)
 
     # Guardamos los resultados en data.json
