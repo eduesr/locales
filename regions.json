@@ -1,0 +1,38 @@
+{
+  "Vigo": [
+    "vigo",
+    "bueu",
+    "morrazo",
+    "pontevedra",
+    "cangas",
+    "moaña",
+    "redondela",
+    "porriño",
+    "nigrán",
+    "baiona",
+    "marín"
+  ],
+  "Santiago": [
+    "santiago",
+    "ames",
+    "teo",
+    "milladoiro",
+    "sigueiro"
+  ],
+  "León": [
+    "león",
+    "ponferrada",
+    "astorga"
+  ],
+  "Oviedo": [
+    "oviedo",
+    "gijón",
+    "avilés",
+    "aviles"
+  ],
+  "Zamora": [
+    "zamora",
+    "toro",
+    "benavente"
+  ]
+}

@@ -101,32 +101,55 @@ document.addEventListener('DOMContentLoaded', () => {
             
             allData = await response.json();
             
-            // Sincronizar todas las pestañas de región (desktop y dropdown)
-            regionTabs.forEach(tab => {
-                tab.addEventListener('click', (e) => {
-                    const selectedRegion = e.currentTarget.dataset.region || e.target.dataset.region;
-                    activeRegion = selectedRegion;
-                    
-                    // Actualizar clase 'active' en todas las pestañas
-                    regionTabs.forEach(t => {
-                        if (t.dataset.region === selectedRegion) {
-                            t.classList.add('active');
-                        } else {
-                            t.classList.remove('active');
-                        }
-                    });
-                    
-                    // Si hicimos click en el dropdown, lo cerramos
-                    if (mobileDropdown) {
-                        mobileDropdown.classList.remove('show');
-                    }
-                    
-                    activeCity = 'Todas'; // Reset city filter when changing region
-                    
-                    renderCityPills();
-                    filterAndRender();
+            // Generate dynamic region tabs
+            const dynamicTabsContainer = document.getElementById('region-selector');
+            if (dynamicTabsContainer) {
+                // Get unique regions
+                const uniqueRegions = new Set(allData.map(item => item.region));
+                const sortedRegions = Array.from(uniqueRegions).sort();
+                
+                // Set first region as active by default if none is set
+                if (!activeRegion || !sortedRegions.includes(activeRegion)) {
+                    activeRegion = sortedRegions.length > 0 ? sortedRegions[0] : null;
+                }
+
+                // Add dynamic region buttons
+                sortedRegions.forEach(region => {
+                    const btn = document.createElement('button');
+                    btn.className = `region-tab ${region === activeRegion ? 'active' : ''}`;
+                    btn.dataset.region = region;
+                    btn.innerHTML = `Área de <strong class="mobile-break">${region}</strong>`;
+                    dynamicTabsContainer.appendChild(btn);
                 });
-            });
+                
+                // Set up event listeners for newly created tabs + dropdown items
+                const allRegionTabs = document.querySelectorAll('.region-tab');
+                allRegionTabs.forEach(tab => {
+                    tab.addEventListener('click', (e) => {
+                        const selectedRegion = e.currentTarget.dataset.region || e.target.dataset.region;
+                        activeRegion = selectedRegion;
+                        
+                        // Actualizar clase 'active' en todas las pestañas
+                        allRegionTabs.forEach(t => {
+                            if (t.dataset.region === selectedRegion) {
+                                t.classList.add('active');
+                            } else {
+                                t.classList.remove('active');
+                            }
+                        });
+                        
+                        // Si hicimos click en el dropdown, lo cerramos
+                        if (mobileDropdown) {
+                            mobileDropdown.classList.remove('show');
+                        }
+                        
+                        activeCity = 'Todas'; // Reset city filter when changing region
+                        
+                        renderCityPills();
+                        filterAndRender();
+                    });
+                });
+            }
             
             // Generate city pills for initial region
             renderCityPills();

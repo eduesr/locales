@@ -103,17 +103,22 @@ def extract_data_from_text(text, html_text, subject, msg_id):
                 location = city
                 break
 
-    # Mapear location a su Área principal
-    regions_mapping = {
-        "Vigo": ["vigo", "bueu", "morrazo", "pontevedra", "cangas", "moaña", "redondela", "porriño", "nigrán", "baiona", "marín"],
-        "Santiago": ["santiago", "ames", "teo", "milladoiro", "sigueiro"]
-    }
+    # Mapear location a su Área principal desde el archivo regions.json
+    regions_mapping = {}
+    try:
+        with open('regions.json', 'r', encoding='utf-8') as rf:
+            regions_mapping = json.load(rf)
+    except Exception as e:
+        print(f"Advertencia: No se pudo leer regions.json ({e}). Usando mapa por defecto.")
+        regions_mapping = {
+            "Vigo": ["vigo", "bueu", "morrazo", "pontevedra", "cangas"]
+        }
     
     region = "Otras zonas"
     loc_lower = location.lower()
     
     for r_name, cities in regions_mapping.items():
-        if any(c in loc_lower for c in cities):
+        if any(c.lower() in loc_lower for c in cities):
             region = r_name
             break
             
