@@ -40,18 +40,19 @@
     </header>
 
     <main class="container">
-        <div class="actions-container" style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
-            <div class="search-container">
-                <input type="text" id="search-input" placeholder="Buscar local, calle...">
-                <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg>
-            </div>
-        </div>
         <div class="filters-summary">
             <div id="city-filters" class="city-filters">
                 <!-- Las pastillas (pills) se insertarán aquí dinámicamente -->
+            </div>
+        </div>
+
+        <div class="actions-container" style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Buscar local, calle...">
+                <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
             </div>
             <span id="results-count" class="results-count">0 locales encontrados</span>
         </div>

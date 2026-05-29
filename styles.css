@@ -128,10 +128,10 @@ main.container {
 }
 
 #search-input {
-    width: 44px; /* Solo muestra el tamaño del círculo del icono */
-    height: 44px;
+    width: 36px; /* Solo muestra el tamaño del círculo del icono */
+    height: 36px;
     padding: 0;
-    border-radius: 22px;
+    border-radius: 18px;
     border: 1px solid var(--border-color);
     background-color: var(--card-bg);
     color: transparent;
