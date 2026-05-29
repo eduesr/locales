@@ -1,0 +1,11 @@
+# Ficheros sensibles de la API de Google (NUNCA SUBIR A GITHUB)
+credentials.json
+token.json
+
+# Ficheros temporales/pruebas
+test_links.py
+__pycache__/
+*.pyc
+
+# Archivos del SO de Mac
+.DS_Store

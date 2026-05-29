@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locales en Compra - Vigo</title>
+    <meta name="description" content="Encuentra las mejores ofertas de locales comerciales en compra en la ciudad de Vigo.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <h1>Namibia Investing</h1>
+            <p>Locales comerciales en venta en <strong>Vigo y Santiago de Compostela</strong> extraídos automáticamente desde Gmail.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="filters">
+            <input type="text" id="search-input" placeholder="Buscar por texto o dirección...">
+            <span id="results-count" class="results-count">0 locales encontrados</span>
+        </div>
+        
+        <div id="city-filters" class="city-filters">
+            <!-- Las pastillas (pills) se insertarán aquí dinámicamente -->
+        </div>
+
+        <div id="listings-grid" class="grid">
+            <!-- Las tarjetas se insertarán aquí dinámicamente con JS -->
+            <div class="loader" id="loader">Cargando datos...</div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 - Plataforma de búsqueda automatizada.</p>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+</body>
+</html>
