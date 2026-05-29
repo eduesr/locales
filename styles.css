@@ -456,3 +456,80 @@ main {
     font-size: 1rem;
     padding: 10px 20px;
 }
+
+/* Meatball Menu & Mobile Actions */
+.actions-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.mobile-menu-container {
+    position: relative;
+}
+
+.meatball-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.2s;
+}
+
+.meatball-btn:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 8px;
+    box-shadow: var(--shadow-lg);
+    z-index: 100;
+    min-width: 200px;
+}
+
+.dropdown-menu.show {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-menu .dropdown-item {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+/* Mobile Visibility Utilities */
+@media (max-width: 768px) {
+    .desktop-only { display: none !important; }
+    .mobile-only { display: block !important; }
+    
+    .actions-container {
+        justify-content: flex-end;
+    }
+    
+    .card-actions {
+        flex-direction: column;
+    }
+    
+    .card-actions .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (min-width: 769px) {
+    .desktop-only { display: inline-block !important; }
+    .mobile-only { display: none !important; }
+}

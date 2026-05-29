@@ -40,15 +40,30 @@
             <div id="region-selector" class="region-tabs">
                 <button class="region-tab active" data-region="Vigo">Área de Vigo</button>
                 <button class="region-tab" data-region="Santiago">Área de Santiago</button>
-                <button class="region-tab" data-region="Descartados">Oso descartados 🐻</button>
+                <button class="region-tab desktop-only" data-region="Descartados">Oso descartados 🐻</button>
             </div>
             
-            <div class="search-container">
-                <input type="text" id="search-input" placeholder="Buscar...">
-                <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg>
+            <div class="actions-container">
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Buscar local, calle...">
+                    <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </div>
+                
+                <div class="mobile-menu-container mobile-only">
+                    <button id="meatball-btn" class="meatball-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="5" r="2"></circle>
+                            <circle cx="12" cy="12" r="2"></circle>
+                            <circle cx="12" cy="19" r="2"></circle>
+                        </svg>
+                    </button>
+                    <div id="mobile-dropdown" class="dropdown-menu">
+                        <button class="region-tab dropdown-item" data-region="Descartados">Oso descartados 🐻</button>
+                    </div>
+                </div>
             </div>
         </div>
         

@@ -4,6 +4,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const resultsCount = document.getElementById('results-count');
     const cityFiltersContainer = document.getElementById('city-filters');
     const regionTabs = document.querySelectorAll('.region-tab');
+    
+    // Elementos del menú móvil
+    const meatballBtn = document.getElementById('meatball-btn');
+    const mobileDropdown = document.getElementById('mobile-dropdown');
+    
+    if (meatballBtn && mobileDropdown) {
+        meatballBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            mobileDropdown.classList.toggle('show');
+        });
+        
+        document.addEventListener('click', () => {
+            mobileDropdown.classList.remove('show');
+        });
+    }
+
     let allData = [];
     let activeRegion = 'Vigo'; // Default region
     let activeCity = 'Todas'; // 'Todas' means no city filter
@@ -86,18 +102,28 @@ document.addEventListener('DOMContentLoaded', () => {
             
             allData = await response.json();
             
-            // Set up region tabs
+            // Sincronizar todas las pestañas de región (desktop y dropdown)
             regionTabs.forEach(tab => {
                 tab.addEventListener('click', (e) => {
-                    // Update active class
-                    regionTabs.forEach(t => t.classList.remove('active'));
-                    e.target.classList.add('active');
+                    const selectedRegion = e.target.dataset.region;
+                    activeRegion = selectedRegion;
                     
-                    // Update active region
-                    activeRegion = e.target.getAttribute('data-region');
+                    // Actualizar clase 'active' en todas las pestañas
+                    regionTabs.forEach(t => {
+                        if (t.dataset.region === selectedRegion) {
+                            t.classList.add('active');
+                        } else {
+                            t.classList.remove('active');
+                        }
+                    });
+                    
+                    // Si hicimos click en el dropdown, lo cerramos
+                    if (mobileDropdown) {
+                        mobileDropdown.classList.remove('show');
+                    }
+                    
                     activeCity = 'Todas'; // Reset city filter when changing region
                     
-                    // Re-render
                     renderCityPills();
                     filterAndRender();
                 });
@@ -230,7 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <p class="card-description">${item.description}</p>
                     <div class="card-footer">
                         <span class="card-date">${date}</span>
-                        <div class="card-actions" style="display: flex; gap: 8px;">
+                        <div class="card-actions">
                             <button class="btn btn-discard" onclick="window.toggleDiscard('${item.id}')" style="background-color: ${discardedUrls.includes(item.url) ? '#10b981' : '#ef4444'};">${discardedUrls.includes(item.url) ? 'Recuperar 🐻' : 'Descartar 🐻'}</button>
                             <a href="${item.url}" class="btn" target="_blank" rel="noopener noreferrer">Ver detalle</a>
                         </div>
