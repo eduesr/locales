@@ -60,32 +60,69 @@ main {
     padding: 40px 0;
 }
 
-/* Filters */
-.filters {
+/* Top Controls */
+.top-controls {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     flex-wrap: wrap;
     gap: 15px;
 }
 
-#search-input {
-    width: 100%;
-    max-width: 400px;
-    padding: 12px 20px;
-    border-radius: 30px;
-    border: 1px solid var(--border-color);
-    background-color: var(--card-bg);
-    color: var(--text-primary);
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    outline: none;
+/* Search Container */
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
 }
 
-#search-input:focus {
-    border-color: var(--accent);
+.search-icon {
+    position: absolute;
+    right: 15px;
+    color: var(--text-secondary);
+    pointer-events: none; /* Let clicks pass to input if underneath */
+}
+
+#search-input {
+    width: 44px; /* Solo muestra el tamaño del círculo del icono */
+    height: 44px;
+    padding: 0;
+    border-radius: 22px;
+    border: 1px solid var(--border-color);
+    background-color: var(--card-bg);
+    color: transparent;
+    font-size: 1rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
+    cursor: pointer;
+}
+
+#search-input::placeholder {
+    color: transparent;
+}
+
+#search-input:focus,
+#search-input:not(:placeholder-shown) {
+    width: 250px;
+    padding: 10px 45px 10px 20px;
+    color: var(--text-primary);
+    cursor: text;
     box-shadow: var(--shadow-glow);
+    border-color: var(--accent);
+}
+
+#search-input:focus::placeholder,
+#search-input:not(:placeholder-shown)::placeholder {
+    color: var(--text-secondary);
+}
+
+/* Filters Summary */
+.filters-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
 }
 
 .results-count {
@@ -93,12 +130,46 @@ main {
     font-size: 0.95rem;
 }
 
+/* Region Tabs - Premium Segmented Control */
+.region-tabs {
+    display: inline-flex;
+    background-color: var(--card-bg);
+    padding: 6px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--border-color);
+}
+
+.region-tab {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    font-weight: 600;
+    padding: 10px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.region-tab:hover {
+    color: var(--text-primary);
+}
+
+.region-tab.active {
+    background-color: var(--accent);
+    color: white;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+    margin-bottom: 0;
+}
+
 /* City Filters (Pills) */
 .city-filters {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    margin-bottom: 40px;
 }
 
 .pill {
@@ -296,16 +367,27 @@ main {
         grid-template-columns: 1fr;
     }
     
-    .filters {
+    .top-controls {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: stretch;
     }
     
-    #search-input {
-        max-width: 100%;
+    .region-tabs {
+        width: 100%;
+        display: flex;
     }
     
-    .city-filters {
-        margin-bottom: 25px;
+    .region-tab {
+        flex: 1;
+        text-align: center;
+    }
+    
+    .search-container {
+        align-self: flex-end;
+    }
+    
+    .filters-summary {
+        flex-direction: column;
+        gap: 15px;
     }
 }
