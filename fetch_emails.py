@@ -109,6 +109,9 @@ def extract_data_from_text(text, html_text, subject, msg_id):
             if not any(x in img_lower for x in ['logo', 'pixel', 'icon', 'tracker', 'blank', 'spacer', 'transparent', 'sgt.fotocasa', 'wf/open', 'cataas', 'statics', 'badge', 'belt', 'qr', 'csat']):
                 image_url = img
                 break
+
+    # Detectar el portal de origen
+    source = "Fotocasa" if "fotocasa" in url.lower() else "Idealista" if "idealista" in url.lower() else "Otro"
                 
     return {
         "id": msg_id,
@@ -121,6 +124,7 @@ def extract_data_from_text(text, html_text, subject, msg_id):
         "description": description,
         "url": url,
         "image_url": image_url,
+        "source": source,
         "date": datetime.now().isoformat() + "Z"
     }
 
