@@ -17,7 +17,7 @@ El sistema está compuesto por dos partes principales: un **Scraper en Python** 
 - **Visualización:** La web carga los datos de `data.json` y permite filtrar por región y ciudades específicas, así como un buscador por texto libre.
 
 #### Lógica de Sincronización y Descartes
-Para que el equipo completo (**El Oso (el jefe) 🐻, El Drome, El Garro y El Fino**) pueda limpiar el listado y que todos vean la misma información en tiempo real, se ha integrado **Firebase Realtime Database**.
+Para que el equipo completo (**El Oso 🐻, El Drome 🐪, El Garro 🪝 y El Fino 🥢**) pueda limpiar el listado y que todos vean la misma información en tiempo real, se ha integrado **Firebase Realtime Database**.
 
 **El flujo de estados es el siguiente:**
 1. **Estado Inicial (Activo):** Cuando un nuevo local llega por correo, aparece en la pestaña de su región correspondiente (ej. Área de Vigo).
