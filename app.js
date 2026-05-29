@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let allData = [];
     let activeCity = 'Todas'; // 'Todas' means no city filter
     let currentSearchTerm = '';
+    let currentSort = 'recent';
 
     // Initialize Firebase
     const firebaseConfig = {
@@ -96,6 +97,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 filterAndRender();
             });
             
+            // Add sort event listener
+            const sortSelect = document.getElementById('sort-select');
+            if (sortSelect) {
+                sortSelect.addEventListener('change', (e) => {
+                    currentSort = e.target.value;
+                    filterAndRender();
+                });
+            }
+            
             // Add scroll event listener for carousel fade effect
             const filtersSummary = document.querySelector('.filters-summary');
             const checkScrollEnd = () => {
@@ -170,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function filterAndRender() {
-        const filtered = allData.filter(item => {
+        let filtered = allData.filter(item => {
             const matchesSearch = item.title.toLowerCase().includes(currentSearchTerm) ||
                                   item.description.toLowerCase().includes(currentSearchTerm) ||
                                   item.location.toLowerCase().includes(currentSearchTerm);
@@ -184,6 +194,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 return matchesSearch && !isDiscarded && matchesCity;
             }
         });
+        
+        // Sorting logic
+        if (currentSort === 'price-asc') {
+            filtered.sort((a, b) => a.price - b.price);
+        } else if (currentSort === 'price-desc') {
+            filtered.sort((a, b) => b.price - a.price);
+        } else {
+            // 'recent' -> default by date descending
+            filtered.sort((a, b) => new Date(b.date) - new Date(a.date));
+        }
+
         renderListings(filtered);
     }
 
