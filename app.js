@@ -46,7 +46,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (discardedUrls.includes(url)) {
             db.ref('discards/' + key).remove();
         } else {
-            db.ref('discards/' + key).set(true);
+            if (confirm("¿Seguro que quieres descartar este local?\nLo pasamos a descartados.")) {
+                db.ref('discards/' + key).set(true)
+                  .catch(err => alert("Error de conexión con la base de datos. Comprueba que las Reglas de Firebase estén en modo prueba (true)."));
+            }
         }
     };
 
