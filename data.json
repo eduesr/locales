@@ -1,5 +1,299 @@
 [
   {
+    "id": "19e7d221566f9857",
+    "title": "¡Nuevo local en tu búsqueda: Murcia!",
+    "price": 39000.0,
+    "currency": "€",
+    "area_m2": 118.0,
+    "region": "Vigo",
+    "location": "Murcia",
+    "description": "Local en Calle Maximinos, 18, Jerónimo y Avileses, Murcia 39.000 € . Local en AVILESES, con 118 m² construidos, para reformar, exterior, planta Baja, ...",
+    "url": "https://www.idealista.com/inmueble/111617918/?utm_medium=email&utm_campaign=express_newAd_sale_professional&utm_campaigntype=retention&utm_project=adNotification&utm_source=alerts-id&utm_date_send=2026-05-31T102405&utm_link=propertyNewPhoto&utm_recipient_id=AWI0J0hfzAzcPCiF4+OCbO4L2Y+utJ6s/vH8FB2x4CU=&utm_notification_id=eee270d0-5143-45c6-86f9-3c6a1a07daff",
+    "image_url": "https://img4.idealista.com/blur/500_375_mq/0/id.pro.es.image.master/27/3a/09/1442345814.jpg",
+    "source": "Idealista",
+    "date": "2026-05-31T08:45:09.844737Z"
+  },
+  {
+    "id": "19e7d1a9af9f9fe1",
+    "title": "Tienes 1 anuncio en Donostia - San Sebastián de Local comercial en Venta, que no se te adelanten",
+    "price": 45000.0,
+    "currency": "€",
+    "area_m2": 12.0,
+    "region": "Vigo",
+    "location": "Donostia - San Sebastián",
+    "description": "De tu búsqueda guardada: Donostia - San Sebastián, Local comercial en Venta ,",
+    "url": "https://www.fotocasa.es/es/comprar/local-comercial/donostia-san-sebastian/ategorrieta-ulia/189815990/d?stc=em-cross_alert-24x7_realtime-20260531-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260531&amp;utm_term=cardFreshContent",
+    "image_url": "https://static.fotocasa.es/images/ads/c4334cf4-98a1-41e8-a059-b6c351d58fbd?rule=web_504x504_jpg_70",
+    "source": "Fotocasa",
+    "date": "2026-05-31T08:45:09.926705Z"
+  },
+  {
+    "id": "19e7d1a027752c4b",
+    "title": "Tienes 1 anuncio en Jaén Capital de Local comercial en Venta, que no se te adelanten",
+    "price": 400000.0,
+    "currency": "€",
+    "area_m2": 80.0,
+    "region": "Vigo",
+    "location": "Jaén Capital",
+    "description": "De tu búsqueda guardada: Jaén Capital, Local comercial en Venta ,",
+    "url": "https://www.fotocasa.es/es/comprar/local-comercial/jaen-capital/hospital/189664351/d?stc=em-cross_alert-24x7_realtime-20260531-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260531&amp;utm_term=cardFreshContent",
+    "image_url": "https://static.fotocasa.es/images/ads/86f7ffba-e52b-40b5-890f-0eb5d8ee9335?rule=web_504x504_jpg_70",
+    "source": "Fotocasa",
+    "date": "2026-05-31T08:45:10.004744Z"
+  },
+  {
+    "id": "19e7d1880c83b632",
+    "title": "Tienes 1 anuncio en Córdoba Capital de Local comercial en Venta, que no se te adelanten",
+    "price": 299999.0,
+    "currency": "€",
+    "area_m2": 216.0,
+    "region": "Vigo",
+    "location": "Córdoba Capital",
+    "description": "De tu búsqueda guardada: Córdoba Capital, Local comercial en Venta ,",
+    "url": "https://www.fotocasa.es/es/comprar/local-comercial/cordoba-capital/el-brillante-el-naranjo-el-tablero/189505473/d?stc=em-cross_alert-24x7_realtime-20260531-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260531&amp;utm_term=cardFreshContent",
+    "image_url": "https://static.fotocasa.es/images/ads/57009bdf-9b00-415d-98ad-deb5a47d2e8f?rule=web_504x504_jpg_70",
+    "source": "Fotocasa",
+    "date": "2026-05-31T08:45:10.085953Z"
+  },
+  {
+    "id": "19e7d14f03d2a1c5",
+    "title": "Tienes 1 anuncio en Bilbao de Local comercial en Venta, que no se te adelanten",
+    "price": 395000.0,
+    "currency": "€",
+    "area_m2": 305.0,
+    "region": "Vigo",
+    "location": "Bilbao",
+    "description": "De tu búsqueda guardada: Bilbao, Local comercial en Venta ,",
+    "url": "https://www.fotocasa.es/es/comprar/local-comercial/bilbao/ametzola/189664344/d?stc=em-cross_alert-24x7_realtime-20260531-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260531&amp;utm_term=cardFreshContent",
+    "image_url": "https://static.fotocasa.es/images/ads/ea24bb71-291e-4b8e-8dfa-67881b1e0d54?rule=web_504x504_jpg_70",
+    "source": "Fotocasa",
+    "date": "2026-05-31T08:45:10.166404Z"
+  },
+  {
+    "id": "19e7d138af370dd1",
+    "title": "Tienes 1 anuncio en Granada Capital de Local comercial en Venta, que no se te adelanten",
+    "price": 250000.0,
+    "currency": "€",
+    "area_m2": 340.0,
+    "region": "Vigo",
+    "location": "Granada Capital",
+    "description": "De tu búsqueda guardada: Granada Capital, Local comercial en Venta ,",
+    "url": "https://www.fotocasa.es/es/comprar/local-comercial/granada-capital/figares/189793273/d?stc=em-cross_alert-24x7_realtime-20260531-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260531&amp;utm_term=cardFreshContent",
+    "image_url": "https://static.fotocasa.es/images/ads/316d103f-dd5b-41ff-9f32-5ef56bb34234?rule=web_504x504_jpg_70",
+    "source": "Fotocasa",
+    "date": "2026-05-31T08:45:10.340652Z"
+  },
+  {
+    "id": "19e7d0efce4e7198",
+    "title": "Tienes 1 anuncio en Granada Capital de Local comercial en Venta, que no se te adelanten",
+    "price": 54000.0,
+    "currency": "€",
+    "area_m2": 60.0,
+    "region": "Vigo",
+    "location": "Granada Capital",
+    "description": "De tu búsqueda guardada: Granada Capital, Local comercial en Venta ,",
+    "url": "https://www.fotocasa.es/es/comprar/local-comercial/granada-capital/angustias-chana-encina/189609724/d?stc=em-cross_alert-24x7_realtime-20260531-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260531&amp;utm_term=cardFreshContent",
+    "image_url": "https://static.fotocasa.es/images/ads/35ebe3d1-7754-41b7-bc2d-4b152ad0b37a?rule=web_504x504_jpg_70",
+    "source": "Fotocasa",
+    "date": "2026-05-31T08:45:10.416364Z"
+  },
+  {
+    "id": "19e7d0d964613e55",
+    "title": "Tienes 1 anuncio en Vigo de Local comercial en Venta, que no se te adelanten",
+    "price": 99000.0,
+    "currency": "€",
+    "area_m2": 120.0,
+    "region": "Vigo",
+    "location": "Vigo",
+    "description": "De tu búsqueda guardada: Vigo, Local comercial en Venta ,",
+    "url": "https://www.fotocasa.es/es/comprar/local-comercial/vigo/no-amueblado/189793348/d?stc=em-cross_alert-24x7_realtime-20260531-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260531&amp;utm_term=cardFreshContent",
+    "image_url": "https://static.fotocasa.es/images/ads/3e1103da-90be-4484-ac23-177a7bbcfd7b?rule=web_504x504_jpg_70",
+    "source": "Fotocasa",
+    "date": "2026-05-31T08:45:10.502435Z"
+  },
+  {
+    "id": "19e7c9f67ccfbd58",
+    "title": "Tienes 3 anuncios en Zaragoza Capital de Local comercial en Venta, que no se te adelanten",
+    "price": 150000.0,
+    "currency": "€",
+    "area_m2": 120.0,
+    "region": "Otras zonas",
+    "location": "Otras zonas",
+    "description": "De tu búsqueda guardada: Zaragoza Capital, Local comercial en Venta ,",
+    "url": "https://www.fotocasa.es/es/comprar/local-comercial/zaragoza-capital/paseo-independencia/189663469/d?stc=em-cross_alert-24x7_realtime-20260531-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260531&amp;utm_term=cardFreshContent",
+    "image_url": "https://static.fotocasa.es/images/ads/727be748-0c99-4377-807e-e8d9f230670d?rule=web_504x504_jpg_70",
+    "source": "Fotocasa",
+    "date": "2026-05-31T08:45:10.633723Z"
+  },
+  {
+    "id": "19e7c8d14178a5a6",
+    "title": "Tienes 1 anuncio en Granada Capital de Local comercial en Venta, que no se te adelanten",
+    "price": 165000.0,
+    "currency": "€",
+    "area_m2": 186.0,
+    "region": "Vigo",
+    "location": "Granada Capital",
+    "description": "De tu búsqueda guardada: Granada Capital, Local comercial en Venta ,",
+    "url": "https://www.fotocasa.es/es/comprar/local-comercial/granada-capital/pajaritos/189831146/d?stc=em-cross_alert-24x7_realtime-20260531-cardLink&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260531&amp;utm_term=cardLink",
+    "image_url": "https://static.fotocasa.es/images/ads/e9089723-3db9-40ee-a63e-79fc1a74a7a2?rule=web_504x504_jpg_70",
+    "source": "Fotocasa",
+    "date": "2026-05-31T08:45:10.716561Z"
+  },
+  {
+    "id": "19e7c85e5fdffe61",
+    "title": "¡Bajada de precio en tu búsqueda: Huelva!",
+    "price": 165000.0,
+    "currency": "€",
+    "area_m2": 0,
+    "region": "Vigo",
+    "location": "Huelva",
+    "description": "Local en Sector a, Centro, Almonte 165.000 € . Local reformado con encanto en pleno centro de Matalascañas Este luminoso local de 110 met... Hola, Edu...",
+    "url": "https://www.idealista.com/inmueble/108145731/?utm_medium=email&utm_campaign=express_priceDrop_sale_professional&utm_campaigntype=retention&utm_project=adNotification&utm_source=alerts-id&utm_date_send=2026-05-31T073329&utm_link=propertyLowPricePhoto&utm_recipient_id=AWI0J0hfzAzcPCiF4+OCbO4L2Y+utJ6s/vH8FB2x4CU=&utm_notification_id=d26e9469-4ca6-482c-aea9-c8523888142f",
+    "image_url": "https://img4.idealista.com/blur/500_375_mq/0/id.pro.es.image.master/28/32/b0/1335216856.jpg",
+    "source": "Idealista",
+    "date": "2026-05-31T08:45:10.792988Z"
+  },
+  {
+    "id": "19e7c7b58d9129aa",
+    "title": "Tienes 1 anuncio en Córdoba Capital de Local comercial en Venta, que no se te adelanten",
+    "price": 303030.0,
+    "currency": "€",
+    "area_m2": 291.0,
+    "region": "Vigo",
+    "location": "Córdoba Capital",
+    "description": "De tu búsqueda guardada: Córdoba Capital, Local comercial en Venta ,",
+    "url": "https://www.fotocasa.es/es/comprar/local-comercial/cordoba-capital/alcolea/189766189/d?stc=em-cross_alert-24x7_realtime-20260531-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260531&amp;utm_term=cardFreshContent",
+    "image_url": "https://static.fotocasa.es/images/ads/288df948-134b-473e-bf05-9c5cb2c0b6c5?rule=web_504x504_jpg_70",
+    "source": "Fotocasa",
+    "date": "2026-05-31T08:45:10.962593Z"
+  },
+  {
+    "id": "19e7c752bbc51ee4",
+    "title": "Tienes 2 anuncios en Granada Capital de Local comercial en Venta, que no se te adelanten",
+    "price": 150000.0,
+    "currency": "€",
+    "area_m2": 60.0,
+    "region": "Otras zonas",
+    "location": "Otras zonas",
+    "description": "De tu búsqueda guardada: Granada Capital, Local comercial en Venta ,",
+    "url": "https://www.fotocasa.es/es/comprar/local-comercial/granada-capital/no-amueblado/189830107/d?stc=em-cross_alert-24x7_realtime-20260531-cardLink&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260531&amp;utm_term=cardLink",
+    "image_url": "https://static.fotocasa.es/images/ads/99ce0dad-5d44-4350-8d6c-e29a871c4237?rule=web_504x504_jpg_70",
+    "source": "Fotocasa",
+    "date": "2026-05-31T08:45:11.045709Z"
+  },
+  {
+    "id": "19e7c732f17906f8",
+    "title": "Tienes 1 anuncio en Murcia Capital de Local comercial en Venta, que no se te adelanten",
+    "price": 43000.0,
+    "currency": "€",
+    "area_m2": 90.0,
+    "region": "Vigo",
+    "location": "Murcia Capital",
+    "description": "De tu búsqueda guardada: Murcia Capital, Local comercial en Venta ,",
+    "url": "https://www.fotocasa.es/es/comprar/local-comercial/murcia-capital/garres-y-lages/189792584/d?stc=em-cross_alert-24x7_realtime-20260531-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260531&amp;utm_term=cardFreshContent",
+    "image_url": "https://static.fotocasa.es/images/ads/b54b4336-fa85-4b0c-8521-e50c2c687279?rule=web_504x504_jpg_70",
+    "source": "Fotocasa",
+    "date": "2026-05-31T08:45:11.139270Z"
+  },
+  {
+    "id": "19e7c729ab723e39",
+    "title": "Tienes 2 anuncios en Segovia Capital de Local comercial en Venta, que no se te adelanten",
+    "price": 403043.0,
+    "currency": "€",
+    "area_m2": 0,
+    "region": "Otras zonas",
+    "location": "Otras zonas",
+    "description": "De tu búsqueda guardada: Segovia Capital, Local comercial en Venta ,",
+    "url": "https://www.fotocasa.es/es/comprar/local-comercial/segovia-capital/centro/189830674/d?stc=em-cross_alert-24x7_realtime-20260531-cardLink&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260531&amp;utm_term=cardLink",
+    "image_url": "https://static.fotocasa.es/images/ads/c5d43b77-e46a-4436-b302-20fd30fcac25?rule=web_504x504_jpg_70",
+    "source": "Fotocasa",
+    "date": "2026-05-31T08:45:11.221968Z"
+  },
+  {
+    "id": "19e7c716186fb154",
+    "title": "Tienes 2 anuncios en Jaén Capital de Local comercial en Venta, que no se te adelanten",
+    "price": 21134.0,
+    "currency": "€",
+    "area_m2": 0,
+    "region": "Otras zonas",
+    "location": "Otras zonas",
+    "description": "De tu búsqueda guardada: Jaén Capital, Local comercial en Venta ,",
+    "url": "https://www.fotocasa.es/es/comprar/local-comercial/jaen-capital/san-bartolome-millan-de-priego/189830784/d?stc=em-cross_alert-24x7_realtime-20260531-cardLink&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260531&amp;utm_term=cardLink",
+    "image_url": "https://static.fotocasa.es/images/ads/f40ce0a2-a12a-46d2-bf78-9f9eae9bc3b8?rule=web_504x504_jpg_70",
+    "source": "Fotocasa",
+    "date": "2026-05-31T08:45:11.293471Z"
+  },
+  {
+    "id": "19e7c70071212ad7",
+    "title": "Tienes 1 anuncio en Zaragoza Capital de Local comercial en Venta, que no se te adelanten",
+    "price": 103727.0,
+    "currency": "€",
+    "area_m2": 0,
+    "region": "Vigo",
+    "location": "Zaragoza Capital",
+    "description": "De tu búsqueda guardada: Zaragoza Capital, Local comercial en Venta ,",
+    "url": "https://www.fotocasa.es/es/comprar/local-comercial/zaragoza-capital/grancasa/189830741/d?stc=em-cross_alert-24x7_realtime-20260531-cardLink&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260531&amp;utm_term=cardLink",
+    "image_url": "https://static.fotocasa.es/images/ads/2f3527f6-636b-4903-bca4-31911c6a89ef?rule=web_504x504_jpg_70",
+    "source": "Fotocasa",
+    "date": "2026-05-31T08:45:11.369110Z"
+  },
+  {
+    "id": "19e7c6d29ca33c59",
+    "title": "Tienes 1 anuncio en Cádiz Capital de Local comercial en Venta, que no se te adelanten",
+    "price": 46703.0,
+    "currency": "€",
+    "area_m2": 25.0,
+    "region": "Vigo",
+    "location": "Cádiz Capital",
+    "description": "De tu búsqueda guardada: Cádiz Capital, Local comercial en Venta ,",
+    "url": "https://www.fotocasa.es/es/comprar/local-comercial/cadiz-capital/alameda-mentidero-teatro-falla/189792499/d?stc=em-cross_alert-24x7_realtime-20260531-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260531&amp;utm_term=cardFreshContent",
+    "image_url": "https://static.fotocasa.es/images/ads/e9239a84-8096-4d4d-8f67-5b496fba0e55?rule=web_504x504_jpg_70",
+    "source": "Fotocasa",
+    "date": "2026-05-31T08:45:11.451696Z"
+  },
+  {
+    "id": "19e7c6d254319deb",
+    "title": "Tienes 2 anuncios en Murcia Capital de Local comercial en Venta, que no se te adelanten",
+    "price": 1799557.0,
+    "currency": "€",
+    "area_m2": 8155.0,
+    "region": "Otras zonas",
+    "location": "Otras zonas",
+    "description": "De tu búsqueda guardada: Murcia Capital, Local comercial en Venta ,",
+    "url": "https://www.fotocasa.es/es/comprar/local-comercial/murcia-capital/el-puntal/189636661/d?stc=em-cross_alert-24x7_realtime-20260531-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260531&amp;utm_term=cardFreshContent",
+    "image_url": "https://static.fotocasa.es/images/ads/23b01856-6af9-4e19-917b-83176b3df694?rule=web_504x504_jpg_70",
+    "source": "Fotocasa",
+    "date": "2026-05-31T08:45:11.559754Z"
+  },
+  {
+    "id": "19e7c6a1d6b6b2f1",
+    "title": "Tienes 3 anuncios en Gijón de Local comercial en Venta, que no se te adelanten",
+    "price": 493900.0,
+    "currency": "€",
+    "area_m2": 174.0,
+    "region": "Otras zonas",
+    "location": "Otras zonas",
+    "description": "De tu búsqueda guardada: Gijón, Local comercial en Venta ,",
+    "url": "https://www.fotocasa.es/es/comprar/local-comercial/gijon/viesques/189830495/d?stc=em-cross_alert-24x7_realtime-20260531-cardLink&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260531&amp;utm_term=cardLink",
+    "image_url": "https://static.fotocasa.es/images/ads/d6ee8a82-7672-4fc7-a1c7-f1184f14da32?rule=web_504x504_jpg_70",
+    "source": "Fotocasa",
+    "date": "2026-05-31T08:45:11.666349Z"
+  },
+  {
+    "id": "19e7c677b8fc0adc",
+    "title": "Tienes 1 anuncio en Donostia - San Sebastián de Local comercial en Venta, que no se te adelanten",
+    "price": 83172.0,
+    "currency": "€",
+    "area_m2": 0,
+    "region": "Vigo",
+    "location": "Donostia - San Sebastián",
+    "description": "De tu búsqueda guardada: Donostia - San Sebastián, Local comercial en Venta ,",
+    "url": "https://www.fotocasa.es/es/comprar/local-comercial/donostia-san-sebastian/martutene/189699602/d?stc=em-cross_alert-24x7_realtime-20260531-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260531&amp;utm_term=cardFreshContent",
+    "image_url": "https://static.fotocasa.es/images/ads/e3b547b0-3cc7-410a-82c1-0d88206ec8ba?rule=web_504x504_jpg_70",
+    "source": "Fotocasa",
+    "date": "2026-05-31T08:45:11.761061Z"
+  },
+  {
     "id": "19e7a7bbb5048dd7",
     "title": "Tienes 1 anuncio en Granada Capital de Local comercial en Venta, que no se te adelanten",
     "price": 350000.0,
@@ -11,7 +305,7 @@
     "url": "https://www.fotocasa.es/es/comprar/local-comercial/granada-capital/salida-de-humos/189790964/d?stc=em-cross_alert-24x7_realtime-20260530-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=cardFreshContent",
     "image_url": "https://static.fotocasa.es/images/ads/0852dfd3-42b1-4ac6-a8a0-c6b9c2365b66?rule=web_504x504_jpg_70",
     "source": "Fotocasa",
-    "date": "2026-05-31T03:50:15.427842Z"
+    "date": "2026-05-31T08:45:11.885119Z"
   },
   {
     "id": "19e7a521ef24a804",
@@ -25,7 +319,7 @@
     "url": "https://www.fotocasa.es/es/comprar/local-comercial/granada-capital/centro-sagrario/189661243/d?stc=em-cross_alert-24x7_realtime-20260530-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=cardFreshContent",
     "image_url": "https://static.fotocasa.es/images/ads/7274f6f1-bb59-48c2-9b6c-b48baea8c2dd?rule=web_504x504_jpg_70",
     "source": "Fotocasa",
-    "date": "2026-05-31T03:50:15.531020Z"
+    "date": "2026-05-31T08:45:11.961727Z"
   },
   {
     "id": "19e7a4b8ba67ec85",
@@ -39,7 +333,7 @@
     "url": "https://www.fotocasa.es/es/comprar/local-comercial/granada-capital/no-amueblado/189560905/d?stc=em-cross_alert-24x7_realtime-20260530-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=cardFreshContent",
     "image_url": "https://static.fotocasa.es/images/ads/0082de0e-46f0-40a2-b96a-5c26ba9ff73e?rule=web_504x504_jpg_70",
     "source": "Fotocasa",
-    "date": "2026-05-31T03:50:15.630734Z"
+    "date": "2026-05-31T08:45:12.029538Z"
   },
   {
     "id": "19e7a4ac85380a10",
@@ -53,7 +347,7 @@
     "url": "https://www.fotocasa.es/es/comprar/local-comercial/murcia-capital/no-amueblado/189634926/d?stc=em-cross_alert-24x7_realtime-20260530-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=cardFreshContent",
     "image_url": "https://static.fotocasa.es/images/ads/3f250bdb-e805-4823-9874-09a3bc666f32?rule=web_504x504_jpg_70",
     "source": "Fotocasa",
-    "date": "2026-05-31T03:50:15.720849Z"
+    "date": "2026-05-31T08:45:12.106222Z"
   },
   {
     "id": "19e7a49b3a44e317",
@@ -67,7 +361,7 @@
     "url": "https://www.fotocasa.es/es/comprar/local-comercial/granada-capital/figares/189812775/d?stc=em-cross_alert-24x7_realtime-20260530-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=cardFreshContent",
     "image_url": "https://static.fotocasa.es/images/ads/3ae462d2-a665-4a20-80ec-d2a9375ca9a9?rule=web_504x504_jpg_70",
     "source": "Fotocasa",
-    "date": "2026-05-31T03:50:15.820891Z"
+    "date": "2026-05-31T08:45:12.184192Z"
   },
   {
     "id": "19e7a49b17309e83",
@@ -81,7 +375,7 @@
     "url": "https://www.fotocasa.es/es/comprar/local-comercial/oviedo/no-amueblado/189698169/d?stc=em-cross_alert-24x7_realtime-20260530-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=cardFreshContent",
     "image_url": "https://static.fotocasa.es/images/ads/64c996a6-9c2f-4209-91d9-88e79139e086?rule=web_504x504_jpg_70",
     "source": "Fotocasa",
-    "date": "2026-05-31T03:50:15.951420Z"
+    "date": "2026-05-31T08:45:12.265261Z"
   },
   {
     "id": "19e7a44abfd71258",
@@ -95,7 +389,7 @@
     "url": "https://www.fotocasa.es/es/comprar/local-comercial/bilbao/begona/189606719/d?stc=em-cross_alert-24x7_realtime-20260530-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=cardFreshContent",
     "image_url": "https://static.fotocasa.es/images/ads/a40e3fd5-8d65-4fd5-851f-5660fc5e0a13?rule=web_504x504_jpg_70",
     "source": "Fotocasa",
-    "date": "2026-05-31T03:50:16.079844Z"
+    "date": "2026-05-31T08:45:12.344274Z"
   },
   {
     "id": "19e7a223b0b2dcbf",
@@ -109,7 +403,7 @@
     "url": "https://www.fotocasa.es/es/comprar/local-comercial/granada-capital/figares/189812622/d?stc=em-cross_alert-24x7_realtime-20260530-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=cardFreshContent",
     "image_url": "https://static.fotocasa.es/images/ads/1722476c-b2cd-471c-a360-fc67c35c7e33?rule=web_504x504_jpg_70",
     "source": "Fotocasa",
-    "date": "2026-05-31T03:50:16.173862Z"
+    "date": "2026-05-31T08:45:12.419473Z"
   },
   {
     "id": "19e7a1f947c1f79f",
@@ -123,7 +417,7 @@
     "url": "https://www.fotocasa.es/es/comprar/local-comercial/bilbao/amueblado-salida-de-humos/189660855/d?stc=em-cross_alert-24x7_realtime-20260530-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=cardFreshContent",
     "image_url": "https://static.fotocasa.es/images/ads/3818915b-648f-4d1b-98ff-d8358f888c30?rule=web_504x504_jpg_70",
     "source": "Fotocasa",
-    "date": "2026-05-31T03:50:16.270070Z"
+    "date": "2026-05-31T08:45:12.495787Z"
   },
   {
     "id": "19e7a1f42ac012ab",
@@ -137,7 +431,7 @@
     "url": "https://www.fotocasa.es/es/comprar/local-comercial/vigo/plaza-espana-corte-ingles/189812167/d?stc=em-cross_alert-24x7_realtime-20260530-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=cardFreshContent",
     "image_url": "https://static.fotocasa.es/images/ads/8825f91e-ef57-49bc-afc2-686005da49bb?rule=web_504x504_jpg_70",
     "source": "Fotocasa",
-    "date": "2026-05-31T03:50:16.375449Z"
+    "date": "2026-05-31T08:45:12.592937Z"
   },
   {
     "id": "19e7a1ed80bd7973",
@@ -151,7 +445,7 @@
     "url": "https://www.fotocasa.es/es/comprar/local-comercial/granada-capital/aire-acondicionado/189790326/d?stc=em-cross_alert-24x7_realtime-20260530-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=cardFreshContent",
     "image_url": "https://static.fotocasa.es/images/ads/d616d840-4e9f-49dd-943a-8b0cf4159ef3?rule=web_504x504_jpg_70",
     "source": "Fotocasa",
-    "date": "2026-05-31T03:50:16.471912Z"
+    "date": "2026-05-31T08:45:12.679588Z"
   },
   {
     "id": "19e7a190528c2e54",
@@ -165,7 +459,7 @@
     "url": "https://www.fotocasa.es/es/comprar/local-comercial/granada-capital/barrio-de-zaidin/189606207/d?stc=em-cross_alert-24x7_realtime-20260530-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=cardFreshContent",
     "image_url": "https://static.fotocasa.es/images/ads/b10d6d45-bc7a-408f-9b9d-f51dadd7147e?rule=web_504x504_jpg_70",
     "source": "Fotocasa",
-    "date": "2026-05-31T03:50:16.606000Z"
+    "date": "2026-05-31T08:45:12.756157Z"
   },
   {
     "id": "19e7a18db0c8b616",
@@ -179,7 +473,7 @@
     "url": "https://www.fotocasa.es/es/comprar/local-comercial/zaragoza-capital/paseo-sagasta/189605889/d?stc=em-cross_alert-24x7_realtime-20260530-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=cardFreshContent",
     "image_url": "https://static.fotocasa.es/images/ads/ae37843f-7c8b-409b-ad74-be08d347105b?rule=web_504x504_jpg_70",
     "source": "Fotocasa",
-    "date": "2026-05-31T03:50:16.762952Z"
+    "date": "2026-05-31T08:45:12.827981Z"
   },
   {
     "id": "19e7a18d4f592959",
@@ -193,7 +487,7 @@
     "url": "https://www.fotocasa.es/es/comprar/local-comercial/bilbao/zurbaran/189606349/d?stc=em-cross_alert-24x7_realtime-20260530-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=cardFreshContent",
     "image_url": "https://static.fotocasa.es/images/ads/60fa9bc2-9960-4a80-ada3-92cecfd1804e?rule=web_504x504_jpg_70",
     "source": "Fotocasa",
-    "date": "2026-05-31T03:50:16.852494Z"
+    "date": "2026-05-31T08:45:12.903989Z"
   },
   {
     "id": "19e7a16ef7e2f593",
@@ -207,7 +501,7 @@
     "url": "https://www.fotocasa.es/es/comprar/local-comercial/segovia-capital/san-lorenzo-san-marcos/189812685/d?stc=em-cross_alert-24x7_realtime-20260530-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=cardFreshContent",
     "image_url": "https://static.fotocasa.es/images/ads/20e51467-7cce-4aaf-99e9-e8899ad380a1?rule=web_504x504_jpg_70",
     "source": "Fotocasa",
-    "date": "2026-05-31T03:50:16.951334Z"
+    "date": "2026-05-31T08:45:12.980084Z"
   },
   {
     "id": "19e7a0d272cb1bfe",
@@ -221,7 +515,7 @@
     "url": "https://www.fotocasa.es/es/comprar/local-comercial/murcia-capital/no-amueblado/189764881/d?stc=em-cross_alert-24x7_realtime-20260530-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=cardFreshContent",
     "image_url": "https://static.fotocasa.es/images/ads/9dc0e77d-ce75-4e7f-989f-39aa08b5231d?rule=web_504x504_jpg_70",
     "source": "Fotocasa",
-    "date": "2026-05-31T03:50:17.042270Z"
+    "date": "2026-05-31T08:45:13.056482Z"
   },
   {
     "id": "19e79ff11c3f3d56",
@@ -235,7 +529,7 @@
     "url": "https://www.fotocasa.es/es/comprar/local-comercial/santiago-de-compostela/salida-de-humos-no-amueblado/163123690/d?stc=em-cross_alert-24x7_realtime-20260530-relaunched&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=relaunched",
     "image_url": "https://static.fotocasa.es/images/ads/6136cf23-0b6d-4043-9780-4e0a0060c7b0?rule=web_504x504_jpg_70",
     "source": "Fotocasa",
-    "date": "2026-05-31T03:50:17.128883Z"
+    "date": "2026-05-31T08:45:13.131437Z"
   },
   {
     "id": "19e79fea24d46a69",
@@ -249,7 +543,7 @@
     "url": "https://www.fotocasa.es/es/comprar/local-comercial/vigo/no-amueblado/160242118/d?stc=em-cross_alert-24x7_realtime-20260530-relaunched&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=relaunched",
     "image_url": "https://static.fotocasa.es/images/ads/71cc9c63-98f6-41eb-8c8a-b785bafedcf5?rule=web_504x504_jpg_70",
     "source": "Fotocasa",
-    "date": "2026-05-31T03:50:17.221472Z"
+    "date": "2026-05-31T08:45:13.207410Z"
   },
   {
     "id": "19e79ee8b14cdc72",
@@ -263,7 +557,7 @@
     "url": "https://www.fotocasa.es/es/comprar/local-comercial/leon-capital/centro-ciudad/189634471/d?stc=em-cross_alert-24x7_realtime-20260530-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=cardFreshContent",
     "image_url": "https://static.fotocasa.es/images/anuncio/2026/05/09/189634451/4912337464.jpg?rule=web_504x504_jpg_70",
     "source": "Fotocasa",
-    "date": "2026-05-31T03:50:17.310148Z"
+    "date": "2026-05-31T08:45:13.282983Z"
   },
   {
     "id": "19e79eda285c97e3",
@@ -277,7 +571,7 @@
     "url": "https://www.fotocasa.es/es/comprar/local-comercial/cordoba-capital/canero/189737944/d?stc=em-cross_alert-24x7_realtime-20260530-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=cardFreshContent",
     "image_url": "https://static.fotocasa.es/images/ads/f36f6f31-8a14-4cdb-8bb3-b1aa71b1b45b?rule=web_504x504_jpg_70",
     "source": "Fotocasa",
-    "date": "2026-05-31T03:50:17.398164Z"
+    "date": "2026-05-31T08:45:13.346311Z"
   },
   {
     "id": "19e79ebad52c030f",
@@ -291,7 +585,7 @@
     "url": "https://www.fotocasa.es/es/comprar/local-comercial/santiago-de-compostela/no-amueblado/163123542/d?stc=em-cross_alert-24x7_realtime-20260530-relaunched&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=relaunched",
     "image_url": "https://static.fotocasa.es/images/ads/92e4bdc7-f818-4dc0-99f7-9b7ad7b7ca89?rule=web_504x504_jpg_70",
     "source": "Fotocasa",
-    "date": "2026-05-31T03:50:17.485653Z"
+    "date": "2026-05-31T08:45:13.425615Z"
   },
   {
     "id": "19e79eadacc50d3b",
@@ -305,7 +599,7 @@
     "url": "https://www.fotocasa.es/es/comprar/local-comercial/murcia-capital/banos-y-mendigo/189660047/d?stc=em-cross_alert-24x7_realtime-20260530-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=cardFreshContent",
     "image_url": "https://static.fotocasa.es/images/ads/04e43910-70ad-4692-bcac-23ffe4847a0d?rule=web_504x504_jpg_70",
     "source": "Fotocasa",
-    "date": "2026-05-31T03:50:17.579908Z"
+    "date": "2026-05-31T08:45:13.497094Z"
   },
   {
     "id": "19e79e8617fc570a",
@@ -319,7 +613,7 @@
     "url": "https://www.fotocasa.es/es/comprar/local-comercial/zaragoza-capital/aire-acondicionado-amueblado/189789524/d?stc=em-cross_alert-24x7_realtime-20260530-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=cardFreshContent",
     "image_url": "https://static.fotocasa.es/images/ads/1a2710e3-66b4-4b66-bd24-8952b3b2eab1?rule=web_504x504_jpg_70",
     "source": "Fotocasa",
-    "date": "2026-05-31T03:50:17.658228Z"
+    "date": "2026-05-31T08:45:13.573088Z"
   },
   {
     "id": "19e79e7557028799",
@@ -333,7 +627,7 @@
     "url": "https://www.fotocasa.es/es/comprar/local-comercial/bilbao/zurbaran/189604572/d?stc=em-cross_alert-24x7_realtime-20260530-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=cardFreshContent",
     "image_url": "https://static.fotocasa.es/images/ads/d991ae4e-5ee5-4b1d-9e65-d904f6dde7d3?rule=web_504x504_jpg_70",
     "source": "Fotocasa",
-    "date": "2026-05-31T03:50:17.754254Z"
+    "date": "2026-05-31T08:45:13.656634Z"
   },
   {
     "id": "19e79e2718b74b6a",
@@ -347,7 +641,7 @@
     "url": "https://www.fotocasa.es/es/comprar/local-comercial/oviedo/no-amueblado/189764544/d?stc=em-cross_alert-24x7_realtime-20260530-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=cardFreshContent",
     "image_url": "https://static.fotocasa.es/images/ads/bd8774dd-78ed-48eb-92d9-7ab9f1db18d0?rule=web_504x504_jpg_70",
     "source": "Fotocasa",
-    "date": "2026-05-31T03:50:17.845881Z"
+    "date": "2026-05-31T08:45:13.735890Z"
   },
   {
     "id": "19e79dfaede5aa05",
@@ -361,7 +655,7 @@
     "url": "https://www.fotocasa.es/es/comprar/local-comercial/granada-capital/barrio-de-zaidin/189812022/d?stc=em-cross_alert-24x7_realtime-20260530-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=cardFreshContent",
     "image_url": "https://static.fotocasa.es/images/ads/0d7d3a92-caab-4b68-92f4-31fbd72254f3?rule=web_504x504_jpg_70",
     "source": "Fotocasa",
-    "date": "2026-05-31T03:50:17.934276Z"
+    "date": "2026-05-31T08:45:13.817340Z"
   },
   {
     "id": "19e79db38afcb15e",
@@ -375,7 +669,7 @@
     "url": "https://www.fotocasa.es/es/comprar/local-comercial/bilbao/salida-de-humos/189789513/d?stc=em-cross_alert-24x7_realtime-20260530-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=cardFreshContent",
     "image_url": "https://static.fotocasa.es/images/ads/383e68fe-e9bf-47e2-b01d-7dc12f1301b0?rule=web_504x504_jpg_70",
     "source": "Fotocasa",
-    "date": "2026-05-31T03:50:18.028405Z"
+    "date": "2026-05-31T08:45:13.924922Z"
   },
   {
     "id": "19e79d866e717b7e",
@@ -389,314 +683,6 @@
     "url": "https://www.fotocasa.es/es/comprar/local-comercial/cordoba-capital/salida-de-humos/189604616/d?stc=em-cross_alert-24x7_realtime-20260530-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=cardFreshContent",
     "image_url": "https://static.fotocasa.es/images/ads/ae7c7263-1335-4729-8ba3-5c4d237a2771?rule=web_504x504_jpg_70",
     "source": "Fotocasa",
-    "date": "2026-05-31T03:50:18.128850Z"
-  },
-  {
-    "id": "19e79afe86e401a6",
-    "title": "Tienes 1 anuncio en Murcia Capital de Local comercial en Venta, que no se te adelanten",
-    "price": 269000.0,
-    "currency": "€",
-    "area_m2": 769.0,
-    "region": "Vigo",
-    "location": "Murcia Capital",
-    "description": "De tu búsqueda guardada: Murcia Capital, Local comercial en Venta ,",
-    "url": "https://www.fotocasa.es/es/comprar/local-comercial/murcia-capital/san-gines/189737622/d?stc=em-cross_alert-24x7_realtime-20260530-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=cardFreshContent",
-    "image_url": "https://static.fotocasa.es/images/ads/ba8e0a35-a1ec-4214-b327-c1cc7070395e?rule=web_504x504_jpg_70",
-    "source": "Fotocasa",
-    "date": "2026-05-31T03:50:18.219292Z"
-  },
-  {
-    "id": "19e79ae8da117533",
-    "title": "Tienes 1 anuncio en Córdoba Capital de Local comercial en Venta, que no se te adelanten",
-    "price": 59000.0,
-    "currency": "€",
-    "area_m2": 54.0,
-    "region": "Vigo",
-    "location": "Córdoba Capital",
-    "description": "De tu búsqueda guardada: Córdoba Capital, Local comercial en Venta ,",
-    "url": "https://www.fotocasa.es/es/comprar/local-comercial/cordoba-capital/sector-sur/189737329/d?stc=em-cross_alert-24x7_realtime-20260530-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=cardFreshContent",
-    "image_url": "https://static.fotocasa.es/images/ads/2c7fdcda-8068-4917-bd16-51b6b141dce4?rule=web_504x504_jpg_70",
-    "source": "Fotocasa",
-    "date": "2026-05-31T03:50:18.306039Z"
-  },
-  {
-    "id": "19e79adeaf4cb7c7",
-    "title": "Tienes 1 anuncio en Vigo de Local comercial en Venta, que no se te adelanten",
-    "price": 69000.0,
-    "currency": "€",
-    "area_m2": 61.0,
-    "region": "Vigo",
-    "location": "Vigo",
-    "description": "De tu búsqueda guardada: Vigo, Local comercial en Venta ,",
-    "url": "https://www.fotocasa.es/es/comprar/local-comercial/vigo/no-amueblado/189603298/d?stc=em-cross_alert-24x7_realtime-20260530-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=cardFreshContent",
-    "image_url": "https://static.fotocasa.es/images/ads/eb86d3ea-283c-4194-b96b-0b3b1b7a07b7?rule=web_504x504_jpg_70",
-    "source": "Fotocasa",
-    "date": "2026-05-31T03:50:18.403717Z"
-  },
-  {
-    "id": "19e79aa18e347da2",
-    "title": "Tienes 1 anuncio en Bilbao de Local comercial en Venta, que no se te adelanten",
-    "price": 54500.0,
-    "currency": "€",
-    "area_m2": 31.0,
-    "region": "Vigo",
-    "location": "Bilbao",
-    "description": "De tu búsqueda guardada: Bilbao, Local comercial en Venta ,",
-    "url": "https://www.fotocasa.es/es/comprar/local-comercial/bilbao/amueblado/189603350/d?stc=em-cross_alert-24x7_realtime-20260530-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=cardFreshContent",
-    "image_url": "https://static.fotocasa.es/images/ads/db43e1a6-bdfc-4ac2-ba78-a22f85c98b06?rule=web_504x504_jpg_70",
-    "source": "Fotocasa",
-    "date": "2026-05-31T03:50:18.491417Z"
-  },
-  {
-    "id": "19e79a640ef2c2a5",
-    "title": "Tienes 1 anuncio en Santiago de Compostela de Local comercial en Venta, que no se te adelanten",
-    "price": 205000.0,
-    "currency": "€",
-    "area_m2": 46.0,
-    "region": "Santiago",
-    "location": "Santiago de Compostela",
-    "description": "De tu búsqueda guardada: Santiago de Compostela, Local comercial en Venta ,",
-    "url": "https://www.fotocasa.es/es/comprar/local-comercial/santiago-de-compostela/no-amueblado/189788165/d?stc=em-cross_alert-24x7_realtime-20260530-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=cardFreshContent",
-    "image_url": "https://static.fotocasa.es/images/ads/d3514d51-f914-4fc2-bf58-667a44f455b9?rule=web_504x504_jpg_70",
-    "source": "Fotocasa",
-    "date": "2026-05-31T03:50:18.578571Z"
-  },
-  {
-    "id": "19e79a1adfcf5df2",
-    "title": "Tienes 1 anuncio en Segovia Capital de Local comercial en Venta, que no se te adelanten",
-    "price": 45000.0,
-    "currency": "€",
-    "area_m2": 30.0,
-    "region": "Vigo",
-    "location": "Segovia Capital",
-    "description": "De tu búsqueda guardada: Segovia Capital, Local comercial en Venta ,",
-    "url": "https://www.fotocasa.es/es/comprar/local-comercial/segovia-capital/centro/189788229/d?stc=em-cross_alert-24x7_realtime-20260530-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=cardFreshContent",
-    "image_url": "https://static.fotocasa.es/images/ads/d9f94a5b-73e5-450e-9ceb-83bd36c7ae22?rule=web_504x504_jpg_70",
-    "source": "Fotocasa",
-    "date": "2026-05-31T03:50:18.671059Z"
-  },
-  {
-    "id": "19e7973bde764b28",
-    "title": "Tienes 1 anuncio en Granada Capital de Local comercial en Venta, que no se te adelanten",
-    "price": 395000.0,
-    "currency": "€",
-    "area_m2": 285.0,
-    "region": "Vigo",
-    "location": "Granada Capital",
-    "description": "De tu búsqueda guardada: Granada Capital, Local comercial en Venta ,",
-    "url": "https://www.fotocasa.es/es/comprar/local-comercial/granada-capital/pajaritos/189658739/d?stc=em-cross_alert-24x7_realtime-20260530-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=cardFreshContent",
-    "image_url": "https://static.fotocasa.es/images/ads/93c8a930-9154-48f5-8055-18188fa70bcd?rule=web_504x504_jpg_70",
-    "source": "Fotocasa",
-    "date": "2026-05-31T03:50:18.753705Z"
-  },
-  {
-    "id": "19e797298ff1f9e7",
-    "title": "Tienes 1 anuncio en Bilbao de Local comercial en Venta, que no se te adelanten",
-    "price": 2450000.0,
-    "currency": "€",
-    "area_m2": 700.0,
-    "region": "Vigo",
-    "location": "Bilbao",
-    "description": "De tu búsqueda guardada: Bilbao, Local comercial en Venta ,",
-    "url": "https://www.fotocasa.es/es/comprar/local-comercial/bilbao/ametzola/189736198/d?stc=em-cross_alert-24x7_realtime-20260530-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=cardFreshContent",
-    "image_url": "https://static.fotocasa.es/images/ads/226b51e4-b54f-475e-bb14-9c82f3ea626c?rule=web_504x504_jpg_70",
-    "source": "Fotocasa",
-    "date": "2026-05-31T03:50:18.839932Z"
-  },
-  {
-    "id": "19e796fa6f60cde1",
-    "title": "Tienes 1 anuncio en Córdoba Capital de Local comercial en Venta, que no se te adelanten",
-    "price": 454523.0,
-    "currency": "€",
-    "area_m2": 195.0,
-    "region": "Vigo",
-    "location": "Córdoba Capital",
-    "description": "De tu búsqueda guardada: Córdoba Capital, Local comercial en Venta ,",
-    "url": "https://www.fotocasa.es/es/comprar/local-comercial/cordoba-capital/aire-acondicionado-no-amueblado/189602516/d?stc=em-cross_alert-24x7_realtime-20260530-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=cardFreshContent",
-    "image_url": "https://static.fotocasa.es/images/ads/c01f9563-cb52-415c-b646-d1b082aad633?rule=web_504x504_jpg_70",
-    "source": "Fotocasa",
-    "date": "2026-05-31T03:50:18.930209Z"
-  },
-  {
-    "id": "19e796d91046f4cf",
-    "title": "Tienes 1 anuncio en Bilbao de Local comercial en Venta, que no se te adelanten",
-    "price": 750000.0,
-    "currency": "€",
-    "area_m2": 500.0,
-    "region": "Vigo",
-    "location": "Bilbao",
-    "description": "De tu búsqueda guardada: Bilbao, Local comercial en Venta ,",
-    "url": "https://www.fotocasa.es/es/comprar/local-comercial/bilbao/sabino-arana-jesuitas/189736240/d?stc=em-cross_alert-24x7_realtime-20260530-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=cardFreshContent",
-    "image_url": "https://static.fotocasa.es/images/ads/2cf067a7-0f03-4e93-9c5c-f018891c27a5?rule=web_504x504_jpg_70",
-    "source": "Fotocasa",
-    "date": "2026-05-31T03:50:19.018235Z"
-  },
-  {
-    "id": "19e7967c3efe762d",
-    "title": "Tienes 1 anuncio en Zaragoza Capital de Local comercial en Venta, que no se te adelanten",
-    "price": 220000.0,
-    "currency": "€",
-    "area_m2": 122.0,
-    "region": "Vigo",
-    "location": "Zaragoza Capital",
-    "description": "De tu búsqueda guardada: Zaragoza Capital, Local comercial en Venta ,",
-    "url": "https://www.fotocasa.es/es/comprar/local-comercial/zaragoza-capital/no-amueblado/189602756/d?stc=em-cross_alert-24x7_realtime-20260530-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=cardFreshContent",
-    "image_url": "https://static.fotocasa.es/images/ads/ecf56e10-4046-473c-a0ce-830fbaa91c70?rule=web_504x504_jpg_70",
-    "source": "Fotocasa",
-    "date": "2026-05-31T03:50:19.116981Z"
-  },
-  {
-    "id": "19e7967b31274161",
-    "title": "Tienes 1 anuncio en Santiago de Compostela de Local comercial en Venta, que no se te adelanten",
-    "price": 650000.0,
-    "currency": "€",
-    "area_m2": 142.0,
-    "region": "Santiago",
-    "location": "Santiago de Compostela",
-    "description": "De tu búsqueda guardada: Santiago de Compostela, Local comercial en Venta ,",
-    "url": "https://www.fotocasa.es/es/comprar/local-comercial/santiago-de-compostela/aire-acondicionado-salida-de-humos-no-amueblado/189602813/d?stc=em-cross_alert-24x7_realtime-20260530-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=cardFreshContent",
-    "image_url": "https://static.fotocasa.es/images/ads/d0d42c19-66c6-4e2d-b70e-f25ea8718e3b?rule=web_504x504_jpg_70",
-    "source": "Fotocasa",
-    "date": "2026-05-31T03:50:19.206319Z"
-  },
-  {
-    "id": "19e7938804129ea1",
-    "title": "Tienes 1 anuncio en Granada Capital de Local comercial en Venta, que no se te adelanten",
-    "price": 135000.0,
-    "currency": "€",
-    "area_m2": 140.0,
-    "region": "Vigo",
-    "location": "Granada Capital",
-    "description": "De tu búsqueda guardada: Granada Capital, Local comercial en Venta ,",
-    "url": "https://www.fotocasa.es/es/comprar/local-comercial/granada-capital/cartuja/189657673/d?stc=em-cross_alert-24x7_realtime-20260530-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=cardFreshContent",
-    "image_url": "https://static.fotocasa.es/images/ads/b51ebe45-2fd3-4264-b872-4bdcabcd696f?rule=web_504x504_jpg_70",
-    "source": "Fotocasa",
-    "date": "2026-05-31T03:50:19.286138Z"
-  },
-  {
-    "id": "19e7922bfe9aa7da",
-    "title": "Tienes 1 anuncio en Gijón de Local comercial en Venta, que no se te adelanten",
-    "price": 265000.0,
-    "currency": "€",
-    "area_m2": 456.0,
-    "region": "Oviedo",
-    "location": "Gijón",
-    "description": "De tu búsqueda guardada: Gijón, Local comercial en Venta ,",
-    "url": "https://www.fotocasa.es/es/comprar/local-comercial/gijon/no-amueblado/161851286/d?stc=em-cross_alert-24x7_realtime-20260530-relaunched&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=relaunched",
-    "image_url": "https://static.fotocasa.es/images/ads/9027c8dd-1fe6-482b-8139-4144911480cc?rule=web_504x504_jpg_70",
-    "source": "Fotocasa",
-    "date": "2026-05-31T03:50:19.381319Z"
-  },
-  {
-    "id": "19e7922bf7282c3e",
-    "title": "Tienes 1 anuncio en Centro de Local comercial en Venta, que no se te adelanten",
-    "price": 265000.0,
-    "currency": "€",
-    "area_m2": 456.0,
-    "region": "Vigo",
-    "location": "Centro",
-    "description": "De tu búsqueda guardada: Centro, Local comercial en Venta ,",
-    "url": "https://www.fotocasa.es/es/comprar/local-comercial/gijon/no-amueblado/161851286/d?stc=em-cross_alert-24x7_realtime-20260530-relaunched&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=relaunched",
-    "image_url": "https://static.fotocasa.es/images/ads/9027c8dd-1fe6-482b-8139-4144911480cc?rule=web_504x504_jpg_70",
-    "source": "Fotocasa",
-    "date": "2026-05-31T03:50:19.472152Z"
-  },
-  {
-    "id": "19e791071a073849",
-    "title": "Tienes 1 anuncio en Vigo de Local comercial en Venta, que no se te adelanten",
-    "price": 840000.0,
-    "currency": "€",
-    "area_m2": 600.0,
-    "region": "Vigo",
-    "location": "Vigo",
-    "description": "De tu búsqueda guardada: Vigo, Local comercial en Venta ,",
-    "url": "https://www.fotocasa.es/es/comprar/local-comercial/vigo/no-amueblado/150993347/d?stc=em-cross_alert-24x7_realtime-20260530-relaunched&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=relaunched",
-    "image_url": "https://static.fotocasa.es/images/ads/62c1f6b8-7948-41be-aec3-5ee17ad1497a?rule=web_504x504_jpg_70",
-    "source": "Fotocasa",
-    "date": "2026-05-31T03:50:19.561849Z"
-  },
-  {
-    "id": "19e790f150189b1f",
-    "title": "Tienes 1 anuncio en Granada Capital de Local comercial en Venta, que no se te adelanten",
-    "price": 220000.0,
-    "currency": "€",
-    "area_m2": 260.0,
-    "region": "Vigo",
-    "location": "Granada Capital",
-    "description": "De tu búsqueda guardada: Granada Capital, Local comercial en Venta ,",
-    "url": "https://www.fotocasa.es/es/comprar/local-comercial/granada-capital/camino-de-ronda/163997183/d?stc=em-cross_alert-24x7_realtime-20260530-relaunched&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=relaunched",
-    "image_url": "https://static.fotocasa.es/images/ads/eb50fbc8-2333-452c-b9d2-ca59c2f6aa39?rule=web_504x504_jpg_70",
-    "source": "Fotocasa",
-    "date": "2026-05-31T03:50:19.650977Z"
-  },
-  {
-    "id": "19e790f089983e6f",
-    "title": "Tienes 1 anuncio en Santiago de Compostela de Local comercial en Venta, que no se te adelanten",
-    "price": 1500000.0,
-    "currency": "€",
-    "area_m2": 587.0,
-    "region": "Santiago",
-    "location": "Santiago de Compostela",
-    "description": "De tu búsqueda guardada: Santiago de Compostela, Local comercial en Venta ,",
-    "url": "https://www.fotocasa.es/es/comprar/local-comercial/santiago-de-compostela/casco-historico/149409822/d?stc=em-cross_alert-24x7_realtime-20260530-relaunched&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=relaunched",
-    "image_url": "https://static.fotocasa.es/images/ads/81a0ee85-b623-4e64-9b96-e0610da74d5c?rule=web_504x504_jpg_70",
-    "source": "Fotocasa",
-    "date": "2026-05-31T03:50:19.734475Z"
-  },
-  {
-    "id": "19e7906a9b271da0",
-    "title": "Tienes 1 anuncio en Santander de Local comercial en Venta, que no se te adelanten",
-    "price": 45000.0,
-    "currency": "€",
-    "area_m2": 28.0,
-    "region": "Vigo",
-    "location": "Santander",
-    "description": "De tu búsqueda guardada: Santander, Local comercial en Venta ,",
-    "url": "https://www.fotocasa.es/es/comprar/local-comercial/santander/no-amueblado/189633211/d?stc=em-cross_alert-24x7_realtime-20260530-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=cardFreshContent",
-    "image_url": "https://static.fotocasa.es/images/ads/97bc4f52-9d06-4638-9ee2-2084cec20409?rule=web_504x504_jpg_70",
-    "source": "Fotocasa",
-    "date": "2026-05-31T03:50:19.818315Z"
-  },
-  {
-    "id": "19e79032511f75de",
-    "title": "Tienes 1 anuncio en Zaragoza Capital de Local comercial en Venta, que no se te adelanten",
-    "price": 165000.0,
-    "currency": "€",
-    "area_m2": 114.0,
-    "region": "Vigo",
-    "location": "Zaragoza Capital",
-    "description": "De tu búsqueda guardada: Zaragoza Capital, Local comercial en Venta ,",
-    "url": "https://www.fotocasa.es/es/comprar/local-comercial/zaragoza-capital/doctor-cerrada/189809021/d?stc=em-cross_alert-24x7_realtime-20260530-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=cardFreshContent",
-    "image_url": "https://static.fotocasa.es/images/ads/5a2dec26-4bbb-4682-b8db-93d1b617be29?rule=web_504x504_jpg_70",
-    "source": "Fotocasa",
-    "date": "2026-05-31T03:50:19.902192Z"
-  },
-  {
-    "id": "19e7900fd35b4961",
-    "title": "Tienes 1 anuncio en Zaragoza Capital de Local comercial en Venta, que no se te adelanten",
-    "price": 825000.0,
-    "currency": "€",
-    "area_m2": 587.0,
-    "region": "Vigo",
-    "location": "Zaragoza Capital",
-    "description": "De tu búsqueda guardada: Zaragoza Capital, Local comercial en Venta ,",
-    "url": "https://www.fotocasa.es/es/comprar/local-comercial/zaragoza-capital/paseo-sagasta/189809322/d?stc=em-cross_alert-24x7_realtime-20260530-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=cardFreshContent",
-    "image_url": "https://static.fotocasa.es/images/ads/7a3f6613-857d-406b-9e84-1e4483a7d5eb?rule=web_504x504_jpg_70",
-    "source": "Fotocasa",
-    "date": "2026-05-31T03:50:19.984935Z"
-  },
-  {
-    "id": "19e78f9e812c0957",
-    "title": "Tienes 1 anuncio en Oviedo de Local comercial en Venta, que no se te adelanten",
-    "price": 210000.0,
-    "currency": "€",
-    "area_m2": 112.0,
-    "region": "Oviedo",
-    "location": "Oviedo",
-    "description": "De tu búsqueda guardada: Oviedo, Local comercial en Venta ,",
-    "url": "https://www.fotocasa.es/es/comprar/local-comercial/oviedo/no-amueblado/189601602/d?stc=em-cross_alert-24x7_realtime-20260530-cardFreshContent&amp;utm_medium=email&amp;utm_source=alert&amp;utm_campaign=24x7_registered_realtime&amp;utm_content=20260530&amp;utm_term=cardFreshContent",
-    "image_url": "https://static.fotocasa.es/images/ads/e0f6df6d-fabc-4ac6-9510-49abb2301221?rule=web_504x504_jpg_70",
-    "source": "Fotocasa",
-    "date": "2026-05-31T03:50:20.073599Z"
+    "date": "2026-05-31T08:45:13.997178Z"
   }
 ]
